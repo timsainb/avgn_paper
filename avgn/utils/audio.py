@@ -1,5 +1,6 @@
 from scipy.io import wavfile
 import numpy as np
+import wave
 
 def load_wav(wav_loc, catch_errors=True):
     if catch_errors:
@@ -35,3 +36,9 @@ def float32_to_int16(data):
     if np.max(data) > 1:
         data = data / np.max(np.abs(data))
     return np.array(data * 32767).astype("int16")
+
+
+def get_samplerate(file):
+    with wave.open(file, 'rb') as f:
+        samplerate = f.getframerate()
+    return samplerate

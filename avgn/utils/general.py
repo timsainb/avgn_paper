@@ -9,10 +9,6 @@ def prepare_env(GPU=[]):
     ipython.magic("load_ext autoreload")
     ipython.magic("autoreload 2")
     ipython.magic("env CUDA_VISIBLE_DEVICES=GPU")
-    #%load_ext autoreload
-    #%autoreload 2
-    #%env CUDA_VISIBLE_DEVICES=GPU
-
 
 def zero_one_norm(x):
     return (x - np.min(x)) / (np.max(x) - np.min(x))
