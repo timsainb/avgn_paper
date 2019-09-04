@@ -1,9 +1,12 @@
 from _ctypes import PyObj_FromPtr
 import json
 import re
+from collections import OrderedDict
+
 
 class NoIndent(object):
     """ Value wrapper. """
+
     def __init__(self, value):
         self.value = value
 
@@ -19,17 +22,21 @@ class NoIndentEncoder(json.JSONEncoder):
     Variables:
         regex {[type]} -- [description]
     """
-    FORMAT_SPEC = '@@{}@@'
-    regex = re.compile(FORMAT_SPEC.format(r'(\d+)'))
+
+    FORMAT_SPEC = "@@{}@@"
+    regex = re.compile(FORMAT_SPEC.format(r"(\d+)"))
 
     def __init__(self, **kwargs):
         # Save copy of any keyword argument values needed for use here.
-        self.__sort_keys = kwargs.get('sort_keys', None)
+        self.__sort_keys = kwargs.get("sort_keys", None)
         super(NoIndentEncoder, self).__init__(**kwargs)
 
     def default(self, obj):
-        return (self.FORMAT_SPEC.format(id(obj)) if isinstance(obj, NoIndent)
-                else super(NoIndentEncoder, self).default(obj))
+        return (
+            self.FORMAT_SPEC.format(id(obj))
+            if isinstance(obj, NoIndent)
+            else super(NoIndentEncoder, self).default(obj)
+        )
 
     def encode(self, obj):
         format_spec = self.FORMAT_SPEC  # Local var to expedite access.
@@ -47,6 +54,11 @@ class NoIndentEncoder(json.JSONEncoder):
             # Replace the matched id string with json formatted representation
             # of the corresponding Python object.
             json_repr = json_repr.replace(
-                            '"{}"'.format(format_spec.format(id)), json_obj_repr)
+                '"{}"'.format(format_spec.format(id)), json_obj_repr
+            )
 
         return json_repr
+
+
+def read_json(json_loc):
+    return json.load(open(json_loc), object_pairs_hook=OrderedDict)

@@ -1,0 +1,40 @@
+import numpy as np
+
+from avgn.utils.paths import DATA_DIR, most_recent_subdirectory
+from avgn.signalprocessing.filtering import prepare_mel_matrix
+from avgn.utils.json import read_json
+from avgn.utils.hparams import HParams
+
+
+class DataSet(object):
+    """
+    """
+
+    def __init__(self, DATASET_ID, hparams=None, default_rate=None):
+        self.default_rate = None
+        self.DATASET_ID = DATASET_ID
+        self.dataset_loc = most_recent_subdirectory(DATA_DIR / "processed" / DATASET_ID)
+        self._get_wav_json_files()
+        self._get_unique_individuals()
+        self.sample_json = read_json(self.json_files[0])
+
+        if hparams is None:
+            self.hparams = HParams()
+        else:
+            self.hparams = hparams
+
+        self.build_mel_matrix()
+
+    def _get_wav_json_files(self):
+        self.wav_files = list((self.dataset_loc / "WAV").glob("*.WAV"))
+        self.json_files = list((self.dataset_loc / "JSON").glob("*.JSON"))
+
+    def build_mel_matrix(self, rate=None):
+        if rate is None:
+            rate = self.sample_json["samplerate_hz"]
+        self.mel_matrix = prepare_mel_matrix(self.hparams, rate)
+
+    def _get_unique_individuals(self):
+        self.json_indv = np.array([i.stem.split("_")[0] for i in self.json_files])
+        self._unique_indvs = np.unique(self.json_indv)
+

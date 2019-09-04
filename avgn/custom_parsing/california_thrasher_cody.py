@@ -44,6 +44,7 @@ def generate_json(wavfile, DT_ID, song_db):
     # rate and length
     json_dict["samplerate_hz"] = sr
     json_dict["length_s"] = wav_duration
+    json_dict["wav_loc"] = wavfile.as_posix()
 
     tg = wavfile.parent.parent / "TextGrids" / (wavfile.stem + ".TextGrid")
 
