@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from tqdm.autonotebook import tqdm
 import matplotlib.collections as mcoll
 import matplotlib.path as mpath
+from matplotlib import collections as mc
+import seaborn as sns
 
 
 def scatter_projections(
@@ -15,7 +17,7 @@ def scatter_projections(
     ax=None,
     figsize=(10, 10),
     alpha=0.1,
-    s=10,
+    s=1,
     color="k",
     color_palette="tab20",
 ):
@@ -137,3 +139,73 @@ def make_segments(x, y):
     segments = np.concatenate([points[:-1], points[1:]], axis=1)
     return segments
 
+
+def plot_label_cluster_transitions(
+    syllable_df,
+    label_of_interest,
+    superlabel="syllables_labels",
+    sublabel="hdbscan_labels",
+    projection_column="umap",
+    line_alpha=0.01,
+    scatter_alpha=0.1,
+    color_palette="tab20",
+    ax=None,
+):
+    """ Given a two sets of labels, plot the transitions 
+    from one set of labels grouped by the second set of
+    labels
+    """
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(10, 10))
+
+    # subset the dataframe that is in the main cluster of interest
+    subset_df = syllable_df[syllable_df[superlabel].values == label_of_interest]
+
+    projections = np.array(list(syllable_df[projection_column].values))
+
+    # unique labels and colors
+    unique_labels = np.unique(subset_df[sublabel].values)
+
+    # we make colors relative to all labels so this plot can match other plots
+    # cpal = sns.color_palette(color_palette, len(unique_labels))
+    all_labels = np.unique(syllable_df[sublabel].values)
+    cpal = sns.color_palette(color_palette, len(all_labels))
+    cpal_dict = {label: np.array(cpal)[all_labels == label] for label in unique_labels}
+    # scatter background
+    ax.scatter(
+        projections[:, 0], projections[:, 1], color="k", alpha=scatter_alpha, s=1
+    )
+
+    # for every HDBSCAN label group in the subsetted dataframe
+    for li, lab in enumerate(tqdm(unique_labels)):
+        color = cpal_dict[lab]
+        if lab == -1:
+            continue
+        # mask for only this label (orig + hdbscan)
+        label_of_interest_mask = (
+            syllable_df[superlabel].values == label_of_interest
+        ) & (syllable_df[sublabel].values == lab)
+
+        ax.scatter(
+            projections[label_of_interest_mask][:, 0],
+            projections[label_of_interest_mask][:, 1],
+            s=1,
+            color=color,
+        )
+
+        # DRAW OUTPUT FROM CLUSTER
+        # TODO - ensure that inbound syllable_sequence_pos is not zero
+        outbound = projections[label_of_interest_mask]
+        inbound = projections[1:][label_of_interest_mask[:-1]]
+        segments = [[i, j] for i, j in zip(outbound, inbound)]
+        lc = mc.LineCollection(segments, colors=color, linewidths=1, alpha=line_alpha)
+        ax.add_collection(lc)
+
+        # DRAW INBOUND FROM CLUSTER
+        outbound = projections[:-1][label_of_interest_mask[1:]]
+        inbound = projections[label_of_interest_mask]
+        segments = [[i, j] for i, j in zip(outbound, inbound)]
+        lc = mc.LineCollection(segments, colors=color, linewidths=1, alpha=line_alpha)
+        ax.add_collection(lc)
+
+    return ax

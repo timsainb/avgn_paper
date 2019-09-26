@@ -6,6 +6,7 @@ import numpy as np
 
 PROJECT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_DIR / "data"
+FIGURE_DIR = PROJECT_DIR / "figures"
 
 
 def ensure_dir(file_path):

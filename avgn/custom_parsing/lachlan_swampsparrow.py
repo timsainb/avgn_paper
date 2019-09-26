@@ -16,7 +16,9 @@ def string2int16(string):
     return struct.unpack("h" * count, byte_array)
 
 
-def annotate_bouts(row, songdata_row, individual_row, wav_elements, wav_syllables, DT_ID):
+def annotate_bouts(
+    row, songdata_row, individual_row, wav_elements, wav_syllables, DT_ID
+):
     """Grabs annotation information for swampsparrow and creates JSON labels and saves wav
     
     [description]
@@ -134,10 +136,10 @@ def annotate_bouts(row, songdata_row, individual_row, wav_elements, wav_syllable
     json_dict["indvs"][individual_row.NAME]["elements"]["syllable"] = NoIndent(
         [int(i) for i in element_syllable_num]
     )
-    json_dict["indvs"][individual_row.NAME]["elements"]["start_time"] = NoIndent(
+    json_dict["indvs"][individual_row.NAME]["elements"]["start_times"] = NoIndent(
         element_start_times
     )
-    json_dict["indvs"][individual_row.NAME]["elements"]["end_time"] = NoIndent(
+    json_dict["indvs"][individual_row.NAME]["elements"]["end_times"] = NoIndent(
         element_end_times
     )
 

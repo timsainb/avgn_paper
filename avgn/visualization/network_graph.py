@@ -12,7 +12,12 @@ import seaborn as sns
 
 
 def plot_network_graph(
-    elements, projections, sequence_ids, color_palette="tab20", ax=None
+    elements,
+    projections,
+    sequence_ids,
+    color_palette="tab20",
+    ax=None,
+    min_cluster_samples=0,
 ):
     """
     """
@@ -22,11 +27,24 @@ def plot_network_graph(
     element_centers = cluster_centers(elements, projections)
 
     # create a transition matrix of elements
-    transition_matrix, element_dict = build_transition_matrix(sequences)
+    transition_matrix, element_dict, drop_list = build_transition_matrix(
+        sequences, min_cluster_samples=min_cluster_samples
+    )
+
     element_dict_r = {v: k for k, v in element_dict.items()}
 
+    true_label = []
+    used_drop_list = []
+    for i in range(len(transition_matrix)):
+        for drop in drop_list:
+            if i + len(used_drop_list) >= drop:
+                if drop not in used_drop_list:
+                    used_drop_list.append(drop)
+        true_label.append(i + len(used_drop_list))
+
+
     # generate graph
-    graph = compute_graph(transition_matrix, min_connections=0.05)
+    graph = compute_graph(transition_matrix, min_connections=0.05, column_names = true_label)
 
     # graph positions
     pos = nx.random_layout(graph)
@@ -68,8 +86,10 @@ def cluster_centers(elements, locations):
     }
 
 
-def build_transition_matrix(sequences):
+def build_transition_matrix(sequences, min_cluster_samples=0):
     """ builds a transition matrix from a set of sequences of discrete categories
+    If there are fewer than min_cluster_samples samples for a given cluster,
+     ignore it in the transition matrix
     """
     unique_elements = np.unique(np.concatenate(sequences))
     element_dict = {element: ei for ei, element in enumerate(unique_elements)}
@@ -79,20 +99,31 @@ def build_transition_matrix(sequences):
             transition_matrix[
                 element_dict[sequence[si]], element_dict[sequence[si + 1]]
             ] += 1
+    # breakme
+    removed_columns = []
+    for ri, row in enumerate(transition_matrix):
+        if np.sum(row) < min_cluster_samples:
+
+            transition_matrix = np.delete(transition_matrix, ri-len(removed_columns), 0)
+            transition_matrix = np.delete(transition_matrix, ri-len(removed_columns), 1)
+            removed_columns.append(ri)
     transition_matrix = transition_matrix / np.sum(transition_matrix, axis=0)
-    return transition_matrix, element_dict
+    return transition_matrix, element_dict, removed_columns
 
 
-def compute_graph(dense_matrix, min_connections=0.05):
+def compute_graph(dense_matrix, min_connections=0.05, column_names = None):
     # Add all nodes to the list
     G = nx.DiGraph()
     # For each item in the node list get outgoing connection of the
     #   *last* item in the list from the dense array
+    if column_names is None:
+        column_names = np.arange(len(dense_matrix))
+        
     for out_node in np.arange(len(dense_matrix)):
         in_list = np.array(np.where(dense_matrix[out_node] > min_connections)[0])
         for ini, in_node in enumerate(in_list):
-            G.add_edge(out_node, in_node)
-            G[out_node][in_node]["weight"] = dense_matrix[out_node][in_node]
+            G.add_edge(column_names[out_node], column_names[in_node])
+            G[column_names[out_node]][column_names[in_node]]["weight"] = dense_matrix[out_node][in_node]
     return G
 
 

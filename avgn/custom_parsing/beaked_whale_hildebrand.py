@@ -5,16 +5,16 @@ import avgn
 from avgn.utils.paths import DATA_DIR
 
 species_dict = {
-    'Cuviers': {
-        'species':'Ziphius cavirostris',
-        'common_name':'Cuvier\'s beaked whale',
+    "Cuviers": {
+        "species": "Ziphius cavirostris",
+        "common_name": "Cuvier's beaked whale",
     },
-    'Gervais': {
-        'species':'Mesoplodon europaeus',
-        'common_name': 'Gervais\'s beaked whale'
-    }
-    
+    "Gervais": {
+        "species": "Mesoplodon europaeus",
+        "common_name": "Gervais's beaked whale",
+    },
 }
+
 
 def generate_wav_json(row, rate, DT_ID):
     DATASET_ID = "hildebrand_" + species_dict[row.species]["common_name"].replace(
@@ -54,7 +54,7 @@ def generate_wav_json(row, rate, DT_ID):
     json_dict["wav_loc"] = wav_out.as_posix()
 
     json_dict["indvs"] = {
-        "UNK": {"clicks": {"start_times": [0.0], "stop_times": [len(wav_data) / rate]}}
+        "UNK": {"clicks": {"start_times": [0.0], "end_times": [len(wav_data) / rate]}}
     }
 
     json_txt = json.dumps(json_dict, cls=NoIndentEncoder, indent=2)

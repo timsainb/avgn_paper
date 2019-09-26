@@ -10,26 +10,35 @@ from joblib import Parallel, delayed
 from tqdm.autonotebook import tqdm
 import pandas as pd
 
-def subset_syllables(json_dict, indv, unit="syllables", hparams=None, include_labels = True):
+
+def subset_syllables(
+    json_dict, indv, unit="syllables", hparams=None, include_labels=True
+):
     """ Grab syllables from wav data
     """
     if type(json_dict) != OrderedDict:
         json_dict = read_json(json_dict)
     # get unit info
     start_times = json_dict["indvs"][indv][unit]["start_times"]
-    end_times = json_dict["indvs"][indv][unit]["stop_times"]
+    # stop times vs end_times is a quick fix that should be fixed on the parsing side
+    if "end_times" in json_dict["indvs"][indv][unit].keys():
+        end_times = json_dict["indvs"][indv][unit]["end_times"]
+    else:
+        end_times = json_dict["indvs"][indv][unit]["stop_times"]
     if include_labels:
-        labels  = json_dict["indvs"][indv][unit]["labels"]
+        labels = json_dict["indvs"][indv][unit]["labels"]
     else:
         labels = None
     # get rate and date
     rate, data = load_wav(json_dict["wav_loc"])
+    # convert data if needed
+    if np.issubdtype(type(data[0]), np.integer):
+        data = int16_to_float32(data)
     # bandpass filter
     if hparams is not None:
         data = butter_bandpass_filter(
             data, hparams.butter_lowcut, hparams.butter_highcut, rate, order=5
         )
-
     syllables = [
         data[int(st * rate) : int(et * rate)] for st, et in zip(start_times, end_times)
     ]
@@ -86,27 +95,49 @@ def pad_spectrogram(spectrogram, pad_length):
         spectrogram, [(0, 0), (pad_left, pad_right)], "constant", constant_values=0
     )
 
-def create_syllable_df(dataset, indv, log_scaling_factor=10, verbosity=0, log_scale_time = True, pad_syllables=True):
+
+def create_syllable_df(
+    dataset,
+    indv,
+    unit="syllables",
+    log_scaling_factor=10,
+    verbosity=0,
+    log_scale_time=True,
+    pad_syllables=True,
+    n_jobs=-1,
+):
     """ from a DataSet object, get all of the syllables from an individual as a spectrogram
     """
     with tqdm(total=4) as pbar:
         # get waveform of syllables
         pbar.set_description("getting syllables")
-        with Parallel(n_jobs=-1, verbose=verbosity) as parallel:
+        with Parallel(n_jobs=n_jobs, verbose=verbosity) as parallel:
             syllables = parallel(
-                delayed(subset_syllables)(json_file, indv=indv, hparams=dataset.hparams)
-                for json_file in tqdm(np.array(dataset.json_files)[dataset.json_indv == indv], desc="getting syllable wavs", leave=False)
+                delayed(subset_syllables)(
+                    json_file, indv=indv, unit=unit, hparams=dataset.hparams
+                )
+                for json_file in tqdm(
+                    np.array(dataset.json_files)[dataset.json_indv == indv],
+                    desc="getting syllable wavs",
+                    leave=False,
+                )
             )
 
             # repeat rate for each wav
-            syllables_sequence_id = np.concatenate([np.repeat(ii, len(i[0])) for ii, i in enumerate(syllables)])
-            syllables_sequence_pos = np.concatenate([np.arange(len(i[0])) for ii, i in enumerate(syllables)])
+            syllables_sequence_id = np.concatenate(
+                [np.repeat(ii, len(i[0])) for ii, i in enumerate(syllables)]
+            )
+            syllables_sequence_pos = np.concatenate(
+                [np.arange(len(i[0])) for ii, i in enumerate(syllables)]
+            )
 
             # list syllables
             syllables_wav = np.concatenate([i[0] for i in syllables])
 
             # repeat rate for each wav
-            syllables_rate = np.concatenate([np.repeat(i[1], len(i[0])) for i in syllables])
+            syllables_rate = np.concatenate(
+                [np.repeat(i[1], len(i[0])) for i in syllables]
+            )
 
             # list syllable labels
             syllables_labels = np.concatenate([i[2] for i in syllables])
@@ -122,17 +153,22 @@ def create_syllable_df(dataset, indv, log_scaling_factor=10, verbosity=0, log_sc
                     use_mel=True,
                     use_tensorflow=False,
                 )
-                for syllable, rate in tqdm(zip(syllables_wav, syllables_rate), total=len(syllables_rate), desc="getting syllable spectrograms", leave=False)
+                for syllable, rate in tqdm(
+                    zip(syllables_wav, syllables_rate),
+                    total=len(syllables_rate),
+                    desc="getting syllable spectrograms",
+                    leave=False,
+                )
             )
             pbar.update(1)
             pbar.set_description("rescaling syllables")
             # log resize spectrograms
             if log_scale_time:
                 syllables_spec = parallel(
-                    delayed(log_resize_spec)(
-                        spec, scaling_factor = log_scaling_factor
+                    delayed(log_resize_spec)(spec, scaling_factor=log_scaling_factor)
+                    for spec in tqdm(
+                        syllables_spec, desc="scaling spectrograms", leave=False
                     )
-                    for spec in tqdm(syllables_spec, desc="scaling spectrograms", leave=False)
                 )
             pbar.update(1)
             pbar.set_description("padding syllables")
@@ -143,20 +179,22 @@ def create_syllable_df(dataset, indv, log_scaling_factor=10, verbosity=0, log_sc
             # pad syllables
             if pad_syllables:
                 syllables_spec = parallel(
-                    delayed(pad_spectrogram)(
-                        spec, pad_length
+                    delayed(pad_spectrogram)(spec, pad_length)
+                    for spec in tqdm(
+                        syllables_spec, desc="padding spectrograms", leave=False
                     )
-                    for spec in tqdm(syllables_spec, desc="padding spectrograms", leave=False)
                 )
             pbar.update(1)
 
-            syllable_df = pd.DataFrame({
-                'syllables_sequence_id': syllables_sequence_id,
-                'syllables_sequence_pos': syllables_sequence_pos,
-                'syllables_wav': syllables_wav,
-                'syllables_rate': syllables_rate,
-                'syllables_labels': syllables_labels,
-                'syllables_spec': syllables_spec,
-             })
+            syllable_df = pd.DataFrame(
+                {
+                    "syllables_sequence_id": syllables_sequence_id,
+                    "syllables_sequence_pos": syllables_sequence_pos,
+                    "syllables_wav": syllables_wav,
+                    "syllables_rate": syllables_rate,
+                    "syllables_labels": syllables_labels,
+                    "syllables_spec": syllables_spec,
+                }
+            )
 
         return syllable_df

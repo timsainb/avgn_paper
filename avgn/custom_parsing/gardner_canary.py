@@ -7,7 +7,8 @@ from avgn.utils.paths import DATA_DIR, ensure_dir
 from avgn.utils.audio import get_samplerate
 import json
 
-DATASET_ID = 'canary'
+DATASET_ID = "canary"
+
 
 def get_phrases(tg, WAVLIST, wav_stems):
     phrase_df = pd.DataFrame(
@@ -45,7 +46,6 @@ def get_phrases(tg, WAVLIST, wav_stems):
     return phrase_df
 
 
-
 def gen_wav_json(wf, wav_df, DT_ID, save_wav=False):
     """ generates a JSON of segmental iformation from the wav_df row
     
@@ -59,25 +59,16 @@ def gen_wav_json(wf, wav_df, DT_ID, save_wav=False):
     Keyword Arguments:
         save_wav {bool} -- [description] (default: {False})
     """
-    
+
     wav_stem = wf.stem
-    
+
     # output locations
     if save_wav:
         # load wav file
-        bout_wav, sr = librosa.load(
-            wf,
-            mono=True,
-            sr=None,
-        )
+        bout_wav, sr = librosa.load(wf, mono=True, sr=None)
 
         wav_out = (
-            DATA_DIR
-            / "processed"
-            / DATASET_ID
-            / DT_ID
-            / "WAV"
-            / (wav_stem + ".WAV")
+            DATA_DIR / "processed" / DATASET_ID / DT_ID / "WAV" / (wav_stem + ".WAV")
         )
         bout_duration = len(bout_wav) / sr
         # save wav file
@@ -89,14 +80,9 @@ def gen_wav_json(wf, wav_df, DT_ID, save_wav=False):
         bout_duration = librosa.get_duration(filename=wav_df.iloc[0].wavloc.as_posix())
 
     json_out = (
-        DATA_DIR
-        / "processed"
-        / DATASET_ID
-        / DT_ID
-        / "JSON"
-        / (wav_stem + ".JSON")
+        DATA_DIR / "processed" / DATASET_ID / DT_ID / "JSON" / (wav_stem + ".JSON")
     )
-    
+
     # create json dictionary
     indv = wav_df.iloc[0].indv
     json_dict = {}
@@ -105,14 +91,20 @@ def gen_wav_json(wf, wav_df, DT_ID, save_wav=False):
     json_dict["datetime"] = wav_df.iloc[0].datetime.strftime("%Y-%m-%d_%H-%M-%S")
     json_dict["original_wav"] = wav_df.iloc[0].wavloc.as_posix()
     json_dict["samplerate_hz"] = sr
-    json_dict["indvs"][indv]["phrases"]["start_times"] = NoIndent(list(wav_df.phrase_start.values))
-    json_dict["indvs"][indv]["phrases"]["phrase_num"] = NoIndent(list(wav_df.phrase_end.values))
-    json_dict["indvs"][indv]["phrases"]["labels"] = NoIndent(list(wav_df.phrase_label.values))
+    json_dict["indvs"][indv]["phrases"]["start_times"] = NoIndent(
+        list(wav_df.phrase_start.values)
+    )
+    json_dict["indvs"][indv]["phrases"]["end_times"] = NoIndent(
+        list(wav_df.phrase_end.values)
+    )
+    json_dict["indvs"][indv]["phrases"]["labels"] = NoIndent(
+        list(wav_df.phrase_label.values)
+    )
     json_dict["wav_loc"] = wav_out.as_posix()
     json_dict["length_s"] = bout_duration
-    json_dict['species'] = "Serinus canaria forma domestica"
-    json_dict['common_name'] = "Domestic canary"
-    
+    json_dict["species"] = "Serinus canaria forma domestica"
+    json_dict["common_name"] = "Domestic canary"
+
     # generate json
     json_txt = json.dumps(json_dict, cls=NoIndentEncoder, indent=2)
 

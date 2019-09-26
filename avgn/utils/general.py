@@ -6,6 +6,7 @@ import pickle
 import zipfile
 from avgn.utils.paths import ensure_dir
 from tqdm.autonotebook import tqdm
+import matplotlib.pyplot as plt
 
 
 def prepare_env(GPU=[]):
@@ -46,4 +47,11 @@ def unzip_file(zip_path, directory_to_extract_to):
         # Loop over each file
         for file in tqdm(iterable=zip_file.namelist(), total=len(zip_file.namelist())):
             zip_file.extract(member=file, path=directory_to_extract_to)
+
+
+def save_fig(loc, save_pdf=True, save_svg=True, save_png=True, save_jpg=True):
+    plt.savefig(str(loc) + ".pdf", dpi=300, bbox_inches="tight", pad_inches=0)
+    plt.savefig(str(loc) + ".svg", dpi=300, bbox_inches="tight", pad_inches=0)
+    plt.savefig(str(loc) + ".png", dpi=300, bbox_inches="tight", pad_inches=0)
+    plt.savefig(str(loc) + ".jpg", dpi=150, bbox_inches="tight", pad_inches=0)
 

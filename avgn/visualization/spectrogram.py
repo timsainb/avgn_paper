@@ -1,5 +1,85 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.patches import Rectangle
+import seaborn as sns
+
+
+def plot_example_specs(
+    specs,
+    labels,
+    clusters_to_viz,
+    custom_pal=sns.color_palette(),
+    nex=4,
+    line_width=10,
+    ax=None,
+    pad=1,
+    figsize=(10, 10),
+):
+    spec_x = np.shape(specs[0])[0]
+    spec_y = np.shape(specs[0])[1]
+    if ax is None:
+        fig, ax = plt.subplots(figsize=figsize)
+    canvas = np.zeros((spec_x * nex, spec_y * len(clusters_to_viz)))
+    for ci, cluster in enumerate(clusters_to_viz):
+        color = np.array(sns.color_palette(custom_pal, len(np.unique(labels))))[
+            np.unique(labels) == cluster
+        ][0]
+        ex_specs = np.random.permutation(specs[labels == cluster])[:nex]
+        for exi, ex in enumerate(ex_specs):
+            canvas[
+                exi * spec_x : (exi + 1) * spec_x, ci * spec_y : (ci + 1) * spec_y
+            ] = ex / np.max(ex)
+
+            rect = Rectangle(
+                xy=[ci * spec_y - 0.5, (exi - 1) * spec_x - 0.5],
+                width=spec_y * exi,
+                height=line_width,
+                linewidth=0,
+                facecolor=color,
+            )
+            ax.add_patch(rect)
+
+            rect = Rectangle(
+                xy=[ci * spec_y - 0.5, exi * spec_x - 0.5],
+                width=spec_y * exi,
+                height=line_width,
+                linewidth=0,
+                facecolor=color,
+            )
+            ax.add_patch(rect)
+
+        rect = Rectangle(
+            xy=[ci * spec_y - 0.5, (exi + 1) * spec_x - 0.5 - line_width],
+            width=spec_y * exi,
+            height=line_width,
+            linewidth=0,
+            facecolor=color,
+        )
+        ax.add_patch(rect)
+
+        rect = Rectangle(
+            xy=[ci * spec_y - 0.5, 0 - 0.5],
+            width=line_width,
+            height=spec_x * len(ex_specs),
+            linewidth=0,
+            facecolor=color,
+        )
+        ax.add_patch(rect)
+
+        rect = Rectangle(
+            xy=[(ci + 1) * spec_y - line_width - 0.5, 0 - 0.5],
+            width=line_width,
+            height=spec_x * len(ex_specs),
+            linewidth=0,
+            facecolor=color,
+        )
+        ax.add_patch(rect)
+
+    ax.matshow(
+        canvas, origin="lower", interpolation="none", aspect="auto", cmap=plt.cm.bone
+    )
+    ax.axis("off")
+    return ax
 
 
 def plot_spec(spec, fig, ax, extent=None, cmap=plt.cm.afmhot, show_cbar=True):

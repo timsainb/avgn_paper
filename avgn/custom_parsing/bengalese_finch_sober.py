@@ -26,7 +26,7 @@ def generate_json_wav(row, CBINLIST, cbin_names, DT_ID):
         row.bird: {
             "syllables": {
                 "start_times": NoIndent(list(row.start_times)),
-                "stop_times": NoIndent(list(row.end_times)),
+                "end_times": NoIndent(list(row.end_times)),
                 "labels": NoIndent(list(row.syllables)),
             }
         }
