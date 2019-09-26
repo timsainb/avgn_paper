@@ -198,3 +198,34 @@ def create_syllable_df(
             )
 
         return syllable_df
+
+
+def get_element(
+    datafile, indv=None, element_number=1, element="syllable", hparams=None
+):
+
+    # if an individual isnt specified, grab the first one
+    if indv == None:
+        indv = datafile.indvs[0]
+
+    # get the element
+    element = datafile.data["indvs"][indv][element]
+
+    # get the part of the wav we want to load
+    st = element["start_time"][element_number]
+    et = element["end_time"][element_number]
+
+    # load the data
+    rate, element = load_wav(
+        datafile.data["wav_loc"], offset=st, duration=et - st, sr=None
+    )
+
+    if np.issubdtype(type(element[0]), np.integer):
+        element = int16_to_float32(data)
+
+    if hparams is not None:
+        element = butter_bandpass_filter(
+            element, hparams.butter_lowcut, hparams.butter_highcut, rate, order=5
+        )
+
+    return rate, element

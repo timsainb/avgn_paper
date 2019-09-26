@@ -10,13 +10,16 @@ class DataSet(object):
     """
     """
 
-    def __init__(self, DATASET_ID, hparams=None, default_rate=None):
+    def __init__(self, DATASET_ID, hparams=None, default_rate=None, load_jsons=True):
         self.default_rate = None
         self.DATASET_ID = DATASET_ID
         self.dataset_loc = most_recent_subdirectory(DATA_DIR / "processed" / DATASET_ID)
         self._get_wav_json_files()
         self._get_unique_individuals()
         self.sample_json = read_json(self.json_files[0])
+        self.data_files = {
+            i.stem: DataFile(i, load_jsons=load_jsons) for i in self.json_files
+        }
 
         if hparams is None:
             self.hparams = HParams()
@@ -35,6 +38,17 @@ class DataSet(object):
         self.mel_matrix = prepare_mel_matrix(self.hparams, rate)
 
     def _get_unique_individuals(self):
-        self.json_indv = np.array([i.stem.split("_")[0] for i in self.json_files])
+        self.json_indv = np.array(
+            [list(read_json(i)["indvs"].keys()) for i in self.json_files]
+        )
         self._unique_indvs = np.unique(self.json_indv)
+
+
+class DataFile(object):
+    """ An object corresponding to a json file
+    """
+
+    def __init__(self, json_loc, load_jsons=True):
+        self.data = read_json(json_loc)
+        self.indvs = list(self.data["indvs"].keys())
 

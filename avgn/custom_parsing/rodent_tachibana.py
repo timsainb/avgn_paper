@@ -82,7 +82,7 @@ def generate_json(row, DT_ID):
         }
     }
 
-    DATASET_ID = "tachibana_" + species
+    DATASET_ID = "tachibana_" + common_name
 
     # dump
     json_txt = json.dumps(json_dict, cls=NoIndentEncoder, indent=2)
