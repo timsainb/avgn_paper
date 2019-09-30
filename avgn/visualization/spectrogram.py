@@ -181,7 +181,42 @@ def plot_segmentations(
 
     plt.show()
 
+def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=2):
+    """
+    """
+    # get column and row sizes
+    rowsize = np.shape(spectrograms[0])[0]
+    colsize = colsize * rowsize
 
+    # create the vanvas
+    canvas = np.zeros((rowsize * maxrows, colsize))
+
+    # fill the canvas
+    column_pos = 0
+    row = 0
+    for speci, spec in enumerate(spectrograms):
+        spec_shape = np.shape(spec)
+        if column_pos + spec_shape[1] > colsize:
+            if row == maxrows - 1:
+                break
+            row += 1
+            column_pos = 0
+        canvas[
+            rowsize * row : rowsize * (row + 1), column_pos : column_pos + spec_shape[1]
+        ] = spec
+        column_pos += spec_shape[1]
+    if row < maxrows - 1:
+        canvas = canvas[: (row + 1) * rowsize, :]
+
+    figsize = (zoom * (colsize / rowsize), zoom * (row + 1))
+    print(figsize, np.shape(canvas), colsize / rowsize, rowsize, colsize)
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.matshow(
+        canvas, cmap=cmap, origin="lower", aspect="auto", interpolation="nearest"
+    )
+    # ax.axis('off')
+    plt.show()
+    
 def plot_syllable_list(
     all_syllables,
     n_mel_freq_components,

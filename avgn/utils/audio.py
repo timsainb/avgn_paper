@@ -8,6 +8,8 @@ def read_wav(wav_loc, method="librosa", **kwargs):
     """ read wav using either librosa or scipy
     """
     if method == "librosa":
+        if "sr" not in kwargs.keys():
+            kwargs["sr"] = None
         data, rate = librosa.core.load(wav_loc, **kwargs)
     elif method == "scipy":
         rate, data = wavfile.read(wav_loc)

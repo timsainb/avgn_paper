@@ -20,6 +20,10 @@ class HParams(object):
         self.griffin_lim_iters = 50
         self.butter_lowcut = 500
         self.butter_highcut = 15000
+        self.reduce_noise = False
+        self.noise_reduce_kwargs = {}
+        self.mask_spec = False
+        self.mask_spec_kwargs = {"spec_thresh": 0.9, "offset": 1e-10}
 
     def save(self):
         raise NotImplementedError

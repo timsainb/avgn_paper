@@ -76,8 +76,8 @@ def generate_json(row, DT_ID):
     json_dict["indvs"] = {
         indv_id: {
             "syllables": {
-                "start_time": NoIndent(list(voc_df.start_time.values)),
-                "end_time": NoIndent(list(voc_df.end_time.values)),
+                "start_times": NoIndent(list(voc_df.start_time.values)),
+                "end_times": NoIndent(list(voc_df.end_time.values)),
             }
         }
     }
