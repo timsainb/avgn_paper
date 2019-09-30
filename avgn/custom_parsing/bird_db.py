@@ -8,7 +8,6 @@ from avgn.utils.audio import get_samplerate
 import json
 from datetime import time as dtt
 
-DATASET_ID = "california_thrasher_cody"
 
 
 def generate_json(wavfile, DT_ID, song_db):
@@ -41,6 +40,10 @@ def generate_json(wavfile, DT_ID, song_db):
             "common_name": "California thrasher",
         },
     }
+
+    DATASET_ID = "BIRD_DB_" + species_dict[row.Species_short_name]["species"].replace(" ", "_")
+
+
     row.Species_short_name
 
     json_dict["species"] = species_dict[row.Species_short_name]["species"]
@@ -50,6 +53,7 @@ def generate_json(wavfile, DT_ID, song_db):
     sr = get_samplerate(wavfile.as_posix())
     wav_duration = librosa.get_duration(filename=wavfile.as_posix())
 
+    json_dict["wav_loc"] = wavfile.as_posix()
     # rate and length
     json_dict["samplerate_hz"] = sr
     json_dict["length_s"] = wav_duration

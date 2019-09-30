@@ -47,3 +47,4 @@ def draw_projection_plots(
     ax.axis("off")
 
     return ax
+

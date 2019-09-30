@@ -312,7 +312,7 @@ def prepare_wav(wav_loc, hparams=None):
     return rate, data
 
 
-def create_label_df(json_dict, hparams=None, labels_to_retain = [], unit="syllables", key=None):
+def create_label_df(json_dict, hparams=None, labels_to_retain = [], unit="syllables", dict_features_to_retain = [], key=None):
     """ create a dataframe from json dictionary of time events and labels
     """
     
@@ -336,7 +336,8 @@ def create_label_df(json_dict, hparams=None, labels_to_retain = [], unit="syllab
         syllable_dfs.append(indv_df)
     
     syllable_df = pd.concat(syllable_dfs)    
-
+    for feat in dict_features_to_retain:
+        syllable_df[feat] = json_dict[feat]
     # associate current syllables with key
     syllable_df['key'] = key
     

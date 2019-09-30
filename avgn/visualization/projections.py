@@ -8,6 +8,7 @@ import matplotlib.collections as mcoll
 import matplotlib.path as mpath
 from matplotlib import collections as mc
 import seaborn as sns
+from matplotlib.lines import Line2D
 
 
 def scatter_projections(
@@ -48,6 +49,12 @@ def scatter_projections(
 
         # plot
     ax.scatter(projection[:, 0], projection[:, 1], alpha=alpha, s=s, color=colors)
+    if labels is not None:
+        legend_elements = [
+            Line2D([0], [0], marker="o", color=value, label=key)
+            for key, value in lab_dict.items()
+        ]
+        ax.legend(handles=legend_elements)
     return ax
 
 
