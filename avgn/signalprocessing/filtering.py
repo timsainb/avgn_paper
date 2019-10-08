@@ -4,7 +4,7 @@ from librosa.core.time_frequency import mel_frequencies
 import warnings
 
 
-def butter_bandpass(lowcut, highcut, fs, order=5):
+def butter_bandpass(lowcut, highcut, fs, order=3):
     nyq = 0.5 * fs
     low = lowcut / nyq
     high = highcut / nyq
@@ -12,7 +12,7 @@ def butter_bandpass(lowcut, highcut, fs, order=5):
     return b, a
 
 
-def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=3):
     if highcut > int(fs / 2):
         warnings.warn("Highcut is too high for bandpass filter. Setting to nyquist")
         highcut = int(fs / 2)

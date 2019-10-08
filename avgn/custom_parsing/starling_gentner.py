@@ -16,7 +16,7 @@ def generate_json(row, DT_ID):
     # general json info
     # make json dictionary
     json_dict = {}
-    json_dict["species"] = "Lonchura striata domestica"
+    json_dict["species"] = "European starling"
     json_dict["common_name"] = "Sturnus vulgaris"
     json_dict["indvs"] = {row.indv: {}}
     json_dict["datetime"] = datestr

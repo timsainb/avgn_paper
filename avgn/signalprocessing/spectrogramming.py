@@ -24,6 +24,25 @@ def spectrogram(y, fs, hparams):
     return _normalize(spectrogram_nn(y, fs, hparams), hparams)
 
 
+def reassigned_spectrogram(y, fs, hparams):
+
+    freqs, times, mags = librosa.reassigned_spectrogram(
+        y=preemphasis(y, hparams),
+        sr=fs,
+        n_fft=hparams.n_fft,
+        hop_length=int(hparams.hop_length_ms / 1000 * fs),
+        win_length=int(hparams.win_length_ms / 1000 * fs),
+        center=False,
+    )
+    S = librosa.amplitude_to_db(
+        (freqs > 0) * (times > 0) * mags, ref=hparams.ref_level_db
+    )
+
+    S = _normalize(S, hparams)
+    return S
+    # return freqs, times, mags
+
+
 def inv_spectrogram(spectrogram, fs, hparams):
     """Converts spectrogram to waveform using librosa"""
     S = _db_to_amp(

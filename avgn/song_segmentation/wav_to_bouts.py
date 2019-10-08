@@ -1,3 +1,5 @@
+### code to quickly go through long WAV files and grab periods of noise within that WAV
+
 import numpy as np
 from datetime import timedelta
 from pathlib2 import Path
@@ -73,7 +75,9 @@ def process_bird_wav(
         ### if the clip is thresholded, as noise, do not save it into dataset
         # bin width in Hz of spectrogram
         freq_step_size_Hz = (rate / 2) / params["num_freq"]
-        bout_spec = threshold_clip(clip, rate, freq_step_size_Hz, params, visualize=visualize, verbose=verbose)
+        bout_spec = threshold_clip(
+            clip, rate, freq_step_size_Hz, params, visualize=visualize, verbose=verbose
+        )
         if bout_spec is None:
             # visualize spectrogram if desired
             if visualize:
@@ -81,7 +85,6 @@ def process_bird_wav(
                 wav_spectrogram = spectrogram(int16_to_float32(clip), params)
                 visualize_spec(wav_spectrogram, show=True)
             continue
-
 
         # determine the datetime of this clip
         start_time = wav_time + timedelta(seconds=onset_sound / float(rate))
@@ -119,7 +122,7 @@ def save_bout_wav(
     """
 
     # save the wav file
-    wav_folder = bird_folder / "wavs" 
+    wav_folder = bird_folder / "wavs"
     ensure_dir(wav_folder)
     wav_loc = wav_folder / (time_string + ".wav")
     # if the file already exists and skip created flag is true, dont overwrite
@@ -128,7 +131,7 @@ def save_bout_wav(
     write_wav(wav_loc, rate, data)
 
     # write to a csv with bird, original wav location, datetime of bout
-    csv_folder = bird_folder / "csv" 
+    csv_folder = bird_folder / "csv"
     csv_loc = csv_folder / (time_string + ".csv")
     ensure_dir(csv_folder)
     with open(csv_loc, "w") as csv_file:
@@ -148,11 +151,13 @@ def save_bout_spec(
     if skip_created and os.path.isfile(spec_loc):
         return
     # plot
-    visualize_spec(wav_spectrogram.T, save_loc=spec_loc, show=False, figsize=(20,5))
+    visualize_spec(wav_spectrogram.T, save_loc=spec_loc, show=False, figsize=(20, 5))
     return
 
 
-def threshold_clip(clip, rate, freq_step_size_Hz, params, visualize=False, verbose=False):
+def threshold_clip(
+    clip, rate, freq_step_size_Hz, params, visualize=False, verbose=False
+):
     """ determines if a clip is a bout, or noise based on threshold parameters
     """
     # get the length of the segment
@@ -161,11 +166,19 @@ def threshold_clip(clip, rate, freq_step_size_Hz, params, visualize=False, verbo
     # return if the clip is the wrong length
     if segment_length <= params["min_segment_length_s"]:
         if verbose:
-            print('Segment length {} less than minimum of {}'.format(segment_length, params["min_segment_length_s"]))
+            print(
+                "Segment length {} less than minimum of {}".format(
+                    segment_length, params["min_segment_length_s"]
+                )
+            )
         return
     if segment_length >= params["max_segment_length_s"]:
         if verbose:
-            print('Segment length {} greather than maximum of {}'.format(segment_length, params["max_segment_length_s"]))
+            print(
+                "Segment length {} greather than maximum of {}".format(
+                    segment_length, params["max_segment_length_s"]
+                )
+            )
         return
 
     # compute spectrogram of clip
@@ -182,7 +195,11 @@ def threshold_clip(clip, rate, freq_step_size_Hz, params, visualize=False, verbo
     # threshold for the location of peak power
     if peak_power_Hz < params["vocal_range_Hz"][0]:
         if verbose:
-            print('Peak power {} Hz less than minimum of {}'.format(peak_power_Hz, params["vocal_range_Hz"][0]))
+            print(
+                "Peak power {} Hz less than minimum of {}".format(
+                    peak_power_Hz, params["vocal_range_Hz"][0]
+                )
+            )
         return
 
     # threshold based on silence
@@ -201,7 +218,11 @@ def threshold_clip(clip, rate, freq_step_size_Hz, params, visualize=False, verbo
     pct_silent = np.sum(vocal_power <= params["noise_thresh"]) / float(len(vocal_power))
     if pct_silent < params["min_silence_pct"]:
         if verbose:
-            print('Percent silent {} /% less than maximum of {}'.format(pct_silent, params["min_silence_pct"]))
+            print(
+                "Percent silent {} /% less than maximum of {}".format(
+                    pct_silent, params["min_silence_pct"]
+                )
+            )
         return
 
     if visualize:

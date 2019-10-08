@@ -7,6 +7,7 @@ import zipfile
 from avgn.utils.paths import ensure_dir
 from tqdm.autonotebook import tqdm
 import matplotlib.pyplot as plt
+from zipfile import BadZipFile
 
 
 def prepare_env(GPU=[]):
@@ -46,7 +47,10 @@ def unzip_file(zip_path, directory_to_extract_to):
     with zipfile.ZipFile(file=zip_path) as zip_file:
         # Loop over each file
         for file in tqdm(iterable=zip_file.namelist(), total=len(zip_file.namelist())):
-            zip_file.extract(member=file, path=directory_to_extract_to)
+            try:
+                zip_file.extract(member=file, path=directory_to_extract_to)
+            except BadZipFile as e:
+                print(e)
 
 
 def save_fig(loc, save_pdf=True, save_svg=True, save_png=True, save_jpg=True):
