@@ -181,6 +181,7 @@ def plot_segmentations(
 
     plt.show()
 
+
 def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=2):
     """
     """
@@ -209,14 +210,15 @@ def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=
         canvas = canvas[: (row + 1) * rowsize, :]
 
     figsize = (zoom * (colsize / rowsize), zoom * (row + 1))
-    print(figsize, np.shape(canvas), colsize / rowsize, rowsize, colsize)
+    # print(figsize, np.shape(canvas), colsize / rowsize, rowsize, colsize)
     fig, ax = plt.subplots(figsize=figsize)
     ax.matshow(
         canvas, cmap=cmap, origin="lower", aspect="auto", interpolation="nearest"
     )
-    # ax.axis('off')
+    ax.axis("off")
     plt.show()
-    
+
+
 def plot_syllable_list(
     all_syllables,
     n_mel_freq_components,

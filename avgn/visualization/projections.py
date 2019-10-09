@@ -21,6 +21,7 @@ def scatter_projections(
     s=1,
     color="k",
     color_palette="tab20",
+    show_legend=True,
 ):
     """ creates a scatterplot of syllables using some projection
     """
@@ -54,7 +55,8 @@ def scatter_projections(
             Line2D([0], [0], marker="o", color=value, label=key)
             for key, value in lab_dict.items()
         ]
-        ax.legend(handles=legend_elements)
+        if show_legend:
+            ax.legend(handles=legend_elements)
     return ax
 
 

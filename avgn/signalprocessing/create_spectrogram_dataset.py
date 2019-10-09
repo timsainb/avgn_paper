@@ -319,6 +319,8 @@ def create_label_df(json_dict, hparams=None, labels_to_retain = [], unit="syllab
     syllable_dfs = []
     # loop through individuals
     for indvi, indv in enumerate(json_dict['indvs'].keys()):
+        if unit not in json_dict['indvs'][indv].keys():
+            continue
         indv_dict = {}
         indv_dict['start_time'] = json_dict['indvs'][indv][unit]['start_times']
         indv_dict['end_time'] = json_dict['indvs'][indv][unit]['end_times']
