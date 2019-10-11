@@ -24,6 +24,9 @@ class HParams(object):
         self.noise_reduce_kwargs = {}
         self.mask_spec = False
         self.mask_spec_kwargs = {"spec_thresh": 0.9, "offset": 1e-10}
+        self.nex = -1
+        self.n_jobs = -1
+        self.verbosity = 1
 
     def save(self):
         raise NotImplementedError
