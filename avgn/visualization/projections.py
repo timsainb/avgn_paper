@@ -224,6 +224,10 @@ def plot_label_cluster_transitions(
     return ax
 
 
+from PIL import Image
+import io
+
+
 def scatter_spec(
     z,
     specs,
@@ -239,21 +243,26 @@ def scatter_spec(
     y_range=None,
     enlarge_points=0,
     draw_lines=True,
+    n_subset=-1,
+    ax=None,
 ):
+    """
+    """
     n_columns = column_size * 4 - 4
     pal = sns.color_palette(pal_color, n_colors=n_columns)
 
     fig = plt.figure(figsize=figsize)
     gs = gridspec.GridSpec(column_size, column_size)
 
-    # prepare the main axis
-    main_ax = fig.add_subplot(gs[1 : column_size - 1, 1 : column_size - 1])
-    # main_ax.scatter(z[:, 0], z[:, 1], **scatter_kwargs)
-    scatter_projections(projection=z, ax=main_ax, **scatter_kwargs)
-
     if x_range is None and y_range is None:
-        xmin, ymin = np.min(z, axis=0)
-        xmax, ymax = np.max(z, axis=0)
+        xmin, xmax = np.sort(np.vstack(z)[:, 0])[
+            np.array([int(len(z) * 0.01), int(len(z) * 0.99)])
+        ]
+        ymin, ymax = np.sort(np.vstack(z)[:, 1])[
+            np.array([int(len(z) * 0.01), int(len(z) * 0.99)])
+        ]
+        # xmin, ymin = np.min(z, axis=0)
+        # xmax, ymax = np.max(z, axis=0)
         xmin -= (xmax - xmin) * range_pad
         xmax += (xmax - xmin) * range_pad
         ymin -= (ymax - ymin) * range_pad
@@ -264,6 +273,22 @@ def scatter_spec(
 
     x_block = (xmax - xmin) / column_size
     y_block = (ymax - ymin) / column_size
+
+    # ignore segments outside of range
+    z = np.array(z)
+    mask = np.array(
+        [(z[:, 0] > xmin) & (z[:, 1] > ymin) & (z[:, 0] < xmax) & (z[:, 1] < ymax)]
+    )[0]
+
+    if "labels" in scatter_kwargs:
+        scatter_kwargs["labels"] = np.array(scatter_kwargs["labels"])[mask]
+    specs = np.array(specs)[mask]
+    z = z[mask]
+
+    # prepare the main axis
+    main_ax = fig.add_subplot(gs[1 : column_size - 1, 1 : column_size - 1])
+    # main_ax.scatter(z[:, 0], z[:, 1], **scatter_kwargs)
+    scatter_projections(projection=z, ax=main_ax, **scatter_kwargs)
 
     # loop through example columns
     axs = {}
@@ -316,6 +341,7 @@ def scatter_spec(
     # voronoi_plot_2d(vor, ax = main_ax);
 
     # find where each point lies in the voronoi diagram
+    z = z[:n_subset]
     point_dist, point_regions = voronoi_kdtree.query(list(z))
 
     lines_list = []
@@ -397,5 +423,13 @@ def scatter_spec(
     # gs.update(wspace=0.5, hspace=0.5)
 
     fig = plt.gcf()
+
+    if ax is not None:
+        buf = io.BytesIO()
+        plt.savefig(buf, dpi=300, bbox_inches="tight", pad_inches=0)
+        buf.seek(0)
+        im = Image.open(buf)
+        ax.imshow(im)
+        plt.close(fig)
 
     return fig, axs, main_ax

@@ -1,0 +1,539 @@
+[I 14:29:35.984 LabApp] [nb_conda_kernels] enabled, 14 kernels found
+[I 14:29:38.885 LabApp] The port 8186 is already in use, trying another port.
+[I 14:29:39.107 LabApp] [jupyter_nbextensions_configurator] enabled 0.4.0
+[I 14:29:39.441 LabApp] JupyterLab extension loaded from /mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/jupyterlab
+[I 14:29:39.441 LabApp] JupyterLab application directory is /mnt/cube/tsainbur/conda_envs/tpy3/share/jupyter/lab
+[I 14:29:39.499 LabApp] Serving notebooks from local directory: /home/AD/tsainbur/github_repos
+[I 14:29:39.499 LabApp] The Jupyter Notebook is running at:
+[I 14:29:39.499 LabApp] http://localhost:8187/?token=3a7357890b53acb133dd7c2150e37137b6c1e71b6c8b2c43
+[I 14:29:39.499 LabApp]  or http://127.0.0.1:8187/?token=3a7357890b53acb133dd7c2150e37137b6c1e71b6c8b2c43
+[I 14:29:39.499 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:29:39.514 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///run/user/18000/jupyter/nbserver-20419-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8187/?token=3a7357890b53acb133dd7c2150e37137b6c1e71b6c8b2c43
+     or http://127.0.0.1:8187/?token=3a7357890b53acb133dd7c2150e37137b6c1e71b6c8b2c43
+[I 14:30:45.967 LabApp] 302 GET /tree (::1) 2.52ms
+[I 14:31:18.809 LabApp] 302 GET /?token=3a7357890b53acb133dd7c2150e37137b6c1e71b6c8b2c43 (::1) 0.60ms
+[W 14:32:26.598 LabApp] delete /avgn_paper/cudf=0.9
+[W 15:08:40.608 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:08:41.876 LabApp] Kernel started: 17f20f81-e059-49a8-864c-62e7ddd683cb
+[I 15:08:44.568 LabApp] Adapting from protocol version 5.1 (kernel 17f20f81-e059-49a8-864c-62e7ddd683cb) to 5.3 (client).
+[I 15:10:46.584 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:10:46.586 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:10:55.256 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:10:55.258 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:12:53.055 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:12:53.058 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:14:06.540 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:14:06.543 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:14:11.381 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:14:11.383 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:17:28.540 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[W 15:17:28.543 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb is not trusted
+[I 15:20:11.902 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:20:37.342 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:23:47.208 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:24:11.619 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:24:13.978 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:25:12.817 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:27:46.105 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:28:06.835 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:29:13.468 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:29:46.772 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:30:11.873 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 17f20f81-e059-49a8-864c-62e7ddd683cb restarted
+[I 15:31:06.007 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:32:00.468 LabApp] Starting buffering for 17f20f81-e059-49a8-864c-62e7ddd683cb:7c2a3a9ad202425682347e70bfabc91f
+[I 15:32:00.493 LabApp] Adapting from protocol version 5.1 (kernel 17f20f81-e059-49a8-864c-62e7ddd683cb) to 5.3 (client).
+[I 15:32:00.494 LabApp] Restoring connection for 17f20f81-e059-49a8-864c-62e7ddd683cb:7c2a3a9ad202425682347e70bfabc91f
+[I 15:32:04.070 LabApp] Starting buffering for 17f20f81-e059-49a8-864c-62e7ddd683cb:7c2a3a9ad202425682347e70bfabc91f
+[I 15:32:04.505 LabApp] Kernel restarted: 17f20f81-e059-49a8-864c-62e7ddd683cb
+[I 15:32:06.909 LabApp] Adapting from protocol version 5.1 (kernel 17f20f81-e059-49a8-864c-62e7ddd683cb) to 5.3 (client).
+[I 15:32:06.910 LabApp] Restoring connection for 17f20f81-e059-49a8-864c-62e7ddd683cb:7c2a3a9ad202425682347e70bfabc91f
+[I 15:32:06.910 LabApp] Replaying 6 buffered messages
+[I 15:34:24.873 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:37:44.911 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:41:06.044 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 15:58:29.605 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 16:01:06.981 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 16:02:33.083 LabApp] Kernel started: 92cb25a9-c440-4c23-ae86-6dde85b2a48d
+[I 16:02:34.712 LabApp] Adapting from protocol version 5.1 (kernel 92cb25a9-c440-4c23-ae86-6dde85b2a48d) to 5.3 (client).
+[I 16:03:53.801 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[I 16:04:03.683 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[I 16:04:28.729 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 16:07:37.309 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[I 16:07:37.681 LabApp] Kernel interrupted: 92cb25a9-c440-4c23-ae86-6dde85b2a48d
+[I 16:08:36.119 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[I 16:10:37.408 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[I 16:12:37.612 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-words-umap.ipynb
+[W 16:13:45.666 LabApp] Blocking request with no referer
+[W 16:13:45.666 LabApp] 403 GET /files/github_repos/avgn_paper/figures/phonemes.jpg (::1): Blocking request from unknown origin
+[W 16:13:45.742 LabApp] 403 GET /files/github_repos/avgn_paper/figures/phonemes.jpg (::1) 77.66ms referer=None
+[W 16:13:50.366 LabApp] 404 GET /tree/github_repos/avgn_paper/figures/phonemes.jpg (::1) 7.16ms referer=None
+[I 16:13:57.591 LabApp] 302 GET /tree/avgn_paper/figures/phonemes.jpg (::1) 2.39ms
+[W 16:13:57.626 LabApp] Blocking request with no referer
+[W 16:13:57.626 LabApp] 403 GET /files/avgn_paper/figures/phonemes.jpg (::1): Blocking request from unknown origin
+[W 16:13:57.629 LabApp] 403 GET /files/avgn_paper/figures/phonemes.jpg (::1) 3.85ms referer=None
+[W 16:14:01.417 LabApp] Blocking request with no referer
+[W 16:14:01.417 LabApp] 403 GET /files/avgn_paper/figures/ (::1): Blocking request from unknown origin
+[W 16:14:01.419 LabApp] 403 GET /files/avgn_paper/figures/ (::1) 3.97ms referer=None
+[I 16:14:04.530 LabApp] 302 GET /tree/avgn_paper/figures/ (::1) 0.94ms
+[W 16:15:50.737 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:15:51.812 LabApp] Kernel started: 20fcd187-6aa4-4789-8c98-137c26058989
+[I 16:15:53.570 LabApp] Adapting from protocol version 5.1 (kernel 20fcd187-6aa4-4789-8c98-137c26058989) to 5.3 (client).
+[I 16:16:51.317 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:16:51.319 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:17:52.834 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:17:52.836 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:23:52.673 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:23:52.675 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:24:47.664 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:24:47.666 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:25:03.722 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:25:03.724 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb is not trusted
+[I 16:25:52.163 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[I 16:27:53.246 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/cassins-syllable-umap.ipynb
+[W 16:31:04.023 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 16:31:05.471 LabApp] Kernel started: 40d7b582-1c06-4c11-8d0c-0326bbfe2dc2
+[I 16:31:06.934 LabApp] Adapting from protocol version 5.1 (kernel 40d7b582-1c06-4c11-8d0c-0326bbfe2dc2) to 5.3 (client).
+[I 16:33:08.960 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb
+[W 16:33:08.962 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[W 16:45:23.573 LabApp] WebSocket ping timeout after 119965 ms.
+[I 16:45:28.577 LabApp] Starting buffering for 20fcd187-6aa4-4789-8c98-137c26058989:bb43777ae11d46f3812c8973405370c3
+[W 16:45:34.715 LabApp] WebSocket ping timeout after 119975 ms.
+[W 16:45:36.911 LabApp] WebSocket ping timeout after 119977 ms.
+[W 16:45:36.936 LabApp] WebSocket ping timeout after 119977 ms.
+[I 16:45:39.717 LabApp] Starting buffering for 92cb25a9-c440-4c23-ae86-6dde85b2a48d:cbf21590e2f14b1a8ade281efbcea0cd
+[I 16:45:41.913 LabApp] Starting buffering for 17f20f81-e059-49a8-864c-62e7ddd683cb:7c2a3a9ad202425682347e70bfabc91f
+[I 16:45:41.938 LabApp] Starting buffering for 40d7b582-1c06-4c11-8d0c-0326bbfe2dc2:bd4138dc4f5b462a853512b2e0ed92a0
+[W 11:52:21.906 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[W 11:52:22.571 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 11:52:23.619 LabApp] Kernel started: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+[I 11:52:24.054 LabApp] Adapting from protocol version 5.1 (kernel 40d7b582-1c06-4c11-8d0c-0326bbfe2dc2) to 5.3 (client).
+[I 11:52:32.761 LabApp] Adapting from protocol version 5.1 (kernel 699e13d6-2df5-4be6-91af-7ed3ede3331a) to 5.3 (client).
+[I 11:54:24.689 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 11:54:24.692 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 11:54:28.170 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb
+[W 11:54:28.174 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 11:56:01.138 LabApp] Adapting from protocol version 5.1 (kernel 17f20f81-e059-49a8-864c-62e7ddd683cb) to 5.3 (client).
+[I 11:56:23.628 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 11:56:23.630 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 11:57:18.399 LabApp] Kernel interrupted: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+Got CUSOLVER error 7 at /conda/conda-bld/libcuml_1566588242169/work/cpp/src/common/cumlHandle.cpp:267
+CUSOLVER_STATUS_INTERNAL_ERROR
+[I 11:57:50.354 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 699e13d6-2df5-4be6-91af-7ed3ede3331a restarted
+[I 11:58:13.734 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-human-phones-umap.ipynb
+[I 11:58:23.767 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 11:58:23.769 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 11:58:58.506 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 17f20f81-e059-49a8-864c-62e7ddd683cb restarted
+[I 12:16:23.773 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:16:23.774 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:18:23.853 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:18:23.854 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:18:26.780 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb
+[W 12:18:26.783 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 12:19:21.520 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:19:21.521 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:19:33.627 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:19:33.629 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:19:44.234 LabApp] Kernel interrupted: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+[I 12:20:24.166 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:20:24.168 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:20:28.830 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb
+[W 12:20:28.832 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 12:21:10.339 LabApp] Kernel interrupted: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+[I 12:21:28.635 LabApp] Kernel interrupted: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+[I 12:22:24.153 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 12:22:24.155 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 12:23:00.217 LabApp] Starting buffering for 17f20f81-e059-49a8-864c-62e7ddd683cb:b4aae02a35124e0e8b49b3afd218752c
+[I 12:23:10.225 LabApp] Kernel started: 6fcc572e-3831-4ae8-95cb-225536608467
+[I 12:23:13.081 LabApp] Adapting from protocol version 5.1 (kernel 6fcc572e-3831-4ae8-95cb-225536608467) to 5.3 (client).
+[I 12:23:25.241 LabApp] Starting buffering for 6fcc572e-3831-4ae8-95cb-225536608467:4b495aed26094d8da15b029e0eac1785
+[I 12:23:37.986 LabApp] Kernel shutdown: 6fcc572e-3831-4ae8-95cb-225536608467
+[W 12:23:38.642 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/fruitbat-isolation-umap.ipynb is not trusted
+[I 12:23:39.662 LabApp] Kernel started: 3cd6a1dc-880a-4e21-92b5-3118b29a9780
+[I 12:23:43.517 LabApp] Kernel shutdown: 40d7b582-1c06-4c11-8d0c-0326bbfe2dc2
+[I 12:23:45.224 LabApp] Kernel shutdown: 699e13d6-2df5-4be6-91af-7ed3ede3331a
+[I 12:23:45.230 LabApp] Adapting from protocol version 5.1 (kernel 3cd6a1dc-880a-4e21-92b5-3118b29a9780) to 5.3 (client).
+[I 12:23:45.749 LabApp] Kernel shutdown: 17f20f81-e059-49a8-864c-62e7ddd683cb
+[I 12:23:47.968 LabApp] Kernel shutdown: 20fcd187-6aa4-4789-8c98-137c26058989
+[I 12:23:53.861 LabApp] Kernel shutdown: 92cb25a9-c440-4c23-ae86-6dde85b2a48d
+[W 12:23:58.028 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb is not trusted
+[I 12:23:59.861 LabApp] Kernel started: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 12:24:02.908 LabApp] Adapting from protocol version 5.1 (kernel 66f2f873-47e1-418f-a61c-25b4a6627eb9) to 5.3 (client).
+[W 12:24:21.799 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[I 12:24:22.658 LabApp] Kernel started: 2d3054ae-066c-4998-bf0a-040fd272b76e
+[I 12:24:25.207 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[W 12:24:33.808 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 12:24:34.600 LabApp] Kernel started: 98fc4fd3-9c54-4da9-9a34-065514d41017
+[I 12:24:37.390 LabApp] Adapting from protocol version 5.1 (kernel 98fc4fd3-9c54-4da9-9a34-065514d41017) to 5.3 (client).
+[W 12:24:52.869 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb is not trusted
+[I 12:24:54.572 LabApp] Kernel started: 3bcbaa8f-8279-4b6f-955a-6537a82c1757
+[I 12:24:56.810 LabApp] Adapting from protocol version 5.1 (kernel 3bcbaa8f-8279-4b6f-955a-6537a82c1757) to 5.3 (client).
+[W 12:25:01.347 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb is not trusted
+[W 12:25:06.966 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb is not trusted
+[I 12:25:07.748 LabApp] Kernel started: fc0b22f0-149f-483f-a3a3-005c25c53225
+[I 12:25:09.089 LabApp] Adapting from protocol version 5.1 (kernel fc0b22f0-149f-483f-a3a3-005c25c53225) to 5.3 (client).
+[I 12:25:11.041 LabApp] Kernel started: 9ae0acb6-5a70-4fdf-8547-1d760390b51c
+[I 12:25:12.459 LabApp] Adapting from protocol version 5.1 (kernel 9ae0acb6-5a70-4fdf-8547-1d760390b51c) to 5.3 (client).
+[W 12:25:19.594 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-mouse-umap.ipynb is not trusted
+[W 12:25:19.842 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 12:25:20.155 LabApp] Kernel started: 27404533-ce8e-4b49-93ff-0132477e97a7
+[I 12:25:21.186 LabApp] Adapting from protocol version 5.1 (kernel 27404533-ce8e-4b49-93ff-0132477e97a7) to 5.3 (client).
+[I 12:25:21.345 LabApp] Kernel started: 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79
+[I 12:25:22.368 LabApp] Adapting from protocol version 5.1 (kernel 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79) to 5.3 (client).
+[W 12:25:32.571 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:25:34.197 LabApp] Kernel started: 80a69b0b-000f-4d9f-807c-9b8537c8b97d
+[W 12:25:35.686 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb is not trusted
+[I 12:25:35.880 LabApp] Adapting from protocol version 5.1 (kernel 80a69b0b-000f-4d9f-807c-9b8537c8b97d) to 5.3 (client).
+[I 12:25:36.652 LabApp] Kernel started: f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e
+[I 12:25:37.871 LabApp] Adapting from protocol version 5.1 (kernel f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e) to 5.3 (client).
+[I 12:25:42.288 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/fruitbat-isolation-umap.ipynb
+[W 12:25:42.293 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/fruitbat-isolation-umap.ipynb is not trusted
+[W 12:25:48.455 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/macaque-syllable-umap.ipynb is not trusted
+[I 12:25:49.101 LabApp] Kernel started: f6663d4f-f39f-43bf-846a-18ff976a5eaf
+[I 12:25:50.673 LabApp] Adapting from protocol version 5.1 (kernel f6663d4f-f39f-43bf-846a-18ff976a5eaf) to 5.3 (client).
+[I 12:26:10.336 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[W 12:26:10.339 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb is not trusted
+[I 12:26:24.647 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[W 12:26:24.648 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[I 12:26:36.455 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb
+[W 12:26:36.457 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 12:27:05.074 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[W 12:27:05.076 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb is not trusted
+[I 12:27:08.640 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb
+[W 12:27:08.641 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb is not trusted
+[I 12:27:21.360 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-mouse-umap.ipynb
+[W 12:27:21.362 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-mouse-umap.ipynb is not trusted
+[I 12:27:37.781 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:27:37.782 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:27:39.509 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 12:27:39.511 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 12:27:48.740 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[W 12:27:48.741 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb is not trusted
+[I 12:27:51.158 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/macaque-syllable-umap.ipynb
+[W 12:27:51.160 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/macaque-syllable-umap.ipynb is not trusted
+[I 12:28:42.895 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[W 12:28:42.901 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb is not trusted
+[I 12:29:34.896 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:29:34.898 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:31:35.080 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:31:35.082 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:33:34.911 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:33:34.913 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:34:27.169 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:34:27.170 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:34:49.847 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:34:49.849 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:34:55.400 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:34:55.401 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:35:34.655 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:35:34.656 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:37:34.590 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:37:34.592 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:39:34.445 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:39:34.445 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:41:34.895 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:41:34.896 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:41:43.591 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb
+[W 12:41:43.592 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/thrasher-syllable-umap.ipynb is not trusted
+[I 12:42:42.468 LabApp] Starting buffering for 80a69b0b-000f-4d9f-807c-9b8537c8b97d:eaed47f9c0cc4996aec674395203191a
+[I 12:42:44.077 LabApp] Kernel shutdown: 80a69b0b-000f-4d9f-807c-9b8537c8b97d
+[I 12:43:41.936 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[W 12:43:41.937 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb is not trusted
+[I 12:45:23.551 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 12:45:36.751 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 12:46:57.919 LabApp] Kernel interrupted: f6663d4f-f39f-43bf-846a-18ff976a5eaf
+[I 12:47:38.309 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 12:47:49.880 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/macaque-syllable-umap.ipynb
+[I 12:49:50.578 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/macaque-syllable-umap.ipynb
+[I 12:50:19.423 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 12:50:22.912 LabApp] Starting buffering for f6663d4f-f39f-43bf-846a-18ff976a5eaf:881825cad030414ebda941ca072c11f4
+[I 12:50:24.018 LabApp] Kernel shutdown: f6663d4f-f39f-43bf-846a-18ff976a5eaf
+[I 12:51:39.445 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 12:52:24.747 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[W 12:52:24.748 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[W 12:54:02.765 LabApp] WebSocket ping timeout after 119982 ms.
+[W 12:54:02.911 LabApp] WebSocket ping timeout after 119981 ms.
+[W 12:54:07.394 LabApp] WebSocket ping timeout after 119982 ms.
+[W 12:54:08.768 LabApp] WebSocket ping timeout after 120877 ms.
+[I 12:54:08.769 LabApp] Starting buffering for 66f2f873-47e1-418f-a61c-25b4a6627eb9:73e2d75ea0d744a685edd2a91813b537
+[W 12:54:09.092 LabApp] WebSocket ping timeout after 119936 ms.
+[I 12:54:12.395 LabApp] Starting buffering for 98fc4fd3-9c54-4da9-9a34-065514d41017:bde34a9e9d8e472e890ff8bb16fc955d
+[W 12:54:12.462 LabApp] WebSocket ping timeout after 119870 ms.
+[I 12:54:13.770 LabApp] Starting buffering for f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e:09af5c3f38f6486f9c621fd275d4469c
+[I 12:54:14.094 LabApp] Starting buffering for fc0b22f0-149f-483f-a3a3-005c25c53225:a71c6c2cbb9545a1b4681e4311498c65
+[I 12:54:17.463 LabApp] Starting buffering for 9ae0acb6-5a70-4fdf-8547-1d760390b51c:7bba80b33bb443b486796db682d52483
+[W 12:54:21.190 LabApp] WebSocket ping timeout after 119979 ms.
+[W 12:54:22.370 LabApp] WebSocket ping timeout after 119977 ms.
+[W 12:54:23.864 LabApp] WebSocket ping timeout after 119620 ms.
+[W 12:54:24.056 LabApp] WebSocket ping timeout after 119714 ms.
+[W 12:54:25.210 LabApp] WebSocket ping timeout after 119981 ms.
+[I 12:54:26.192 LabApp] Starting buffering for 27404533-ce8e-4b49-93ff-0132477e97a7:049c5f83af99425f9e0e141ca6ab5918
+[W 12:54:26.813 LabApp] WebSocket ping timeout after 119939 ms.
+[I 12:54:27.372 LabApp] Starting buffering for 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79:44b1f9c2ced64077a6edce0ca0e1b7e4
+[I 12:54:28.866 LabApp] Starting buffering for 3cd6a1dc-880a-4e21-92b5-3118b29a9780:29ef092561ed48dd8d59e70bacdedc2e
+[I 12:54:30.212 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:01b6e061d2ef4b4f90ff1976b4098815
+[I 12:54:31.815 LabApp] Starting buffering for 3bcbaa8f-8279-4b6f-955a-6537a82c1757:2082e68d668a49bd9dfd8c2678383585
+[I 13:24:34.508 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 13:24:34.511 LabApp] Restoring connection for 2d3054ae-066c-4998-bf0a-040fd272b76e:01b6e061d2ef4b4f90ff1976b4098815
+[I 13:24:55.477 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 13:25:41.835 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[W 13:25:41.836 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[W 13:30:34.512 LabApp] WebSocket ping timeout after 119995 ms.
+[I 13:30:39.514 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:01b6e061d2ef4b4f90ff1976b4098815
+[I 15:44:07.040 LabApp] Kernel started: 33b45f22-5576-43e2-97b7-a32613fce2a4
+[I 15:44:08.630 LabApp] Adapting from protocol version 5.1 (kernel f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e) to 5.3 (client).
+[I 15:44:09.248 LabApp] Adapting from protocol version 5.1 (kernel 33b45f22-5576-43e2-97b7-a32613fce2a4) to 5.3 (client).
+[I 15:44:49.272 LabApp] Starting buffering for 33b45f22-5576-43e2-97b7-a32613fce2a4:581b1622d5d24c9a8b0002ff56a830e0
+[W 15:45:59.270 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 15:46:00.333 LabApp] Kernel started: 08e58ea1-c381-41d5-80c8-1b513b7c28b6
+[I 15:46:02.505 LabApp] Adapting from protocol version 5.1 (kernel 08e58ea1-c381-41d5-80c8-1b513b7c28b6) to 5.3 (client).
+[I 15:46:08.254 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:47:01.085 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:47:11.108 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:47:36.591 LabApp] Kernel started: b1475146-df01-419d-ab38-cc741375fc46
+[I 15:47:38.012 LabApp] Adapting from protocol version 5.1 (kernel b1475146-df01-419d-ab38-cc741375fc46) to 5.3 (client).
+[I 15:48:00.379 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 15:48:00.381 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 15:48:08.230 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:49:34.067 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:49:44.308 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:50:03.582 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:52:08.192 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:52:15.199 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:52:21.561 LabApp] Kernel interrupted: f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e
+[I 15:54:08.157 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:56:09.046 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:57:03.748 LabApp] Starting buffering for b1475146-df01-419d-ab38-cc741375fc46:2ac9921d1e37450dbc087dbed71ebee9
+[W 15:57:04.896 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[I 15:57:05.822 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 15:57:10.311 LabApp] Adapting from protocol version 5.1 (kernel 3bcbaa8f-8279-4b6f-955a-6537a82c1757) to 5.3 (client).
+[I 15:58:00.287 LabApp] Kernel interrupted: f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e
+[I 15:58:00.431 LabApp] Kernel interrupted: f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e
+[I 15:58:08.220 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 15:59:10.707 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:00:08.213 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[W 16:00:12.133 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:00:13.542 LabApp] Adapting from protocol version 5.1 (kernel 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79) to 5.3 (client).
+[I 16:01:04.962 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:01:05.962 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:01:11.690 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:01:32.049 LabApp] Kernel shutdown: f57a99d2-2a3d-4982-b869-a0a4ec8bcc1e
+[I 16:02:08.758 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 16:02:13.834 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:02:13.835 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:02:20.593 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:02:20.594 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:02:23.232 LabApp] Kernel interrupted: 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79
+[I 16:02:27.808 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:02:27.810 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:03:07.235 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:03:10.455 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:03:12.890 LabApp] Kernel interrupted: 3bcbaa8f-8279-4b6f-955a-6537a82c1757
+[I 16:03:16.269 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/bf-sober-umap.ipynb
+[I 16:04:13.773 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:04:13.774 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:05:10.397 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[W 16:18:40.313 LabApp] WebSocket ping timeout after 119992 ms.
+[W 16:18:43.544 LabApp] WebSocket ping timeout after 119960 ms.
+[I 16:18:45.315 LabApp] Starting buffering for 3bcbaa8f-8279-4b6f-955a-6537a82c1757:ce83cdadc3d54b05a3daa3e942bc1199
+[I 16:18:48.546 LabApp] Starting buffering for 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79:4d0b6403f167479089b2511d0be1ddd4
+[W 16:19:02.508 LabApp] WebSocket ping timeout after 119995 ms.
+[W 16:19:05.824 LabApp] WebSocket ping timeout after 119918 ms.
+[I 16:19:07.510 LabApp] Starting buffering for 08e58ea1-c381-41d5-80c8-1b513b7c28b6:88dad83bce6f46678bb332087de290e0
+[I 16:19:10.826 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 16:25:22.557 LabApp] Adapting from protocol version 5.1 (kernel 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79) to 5.3 (client).
+[I 16:25:22.559 LabApp] Restoring connection for 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79:4d0b6403f167479089b2511d0be1ddd4
+[I 16:25:22.584 LabApp] Adapting from protocol version 5.1 (kernel 3bcbaa8f-8279-4b6f-955a-6537a82c1757) to 5.3 (client).
+[I 16:25:22.592 LabApp] Restoring connection for 3bcbaa8f-8279-4b6f-955a-6537a82c1757:ce83cdadc3d54b05a3daa3e942bc1199
+[I 16:25:25.942 LabApp] Adapting from protocol version 5.1 (kernel 08e58ea1-c381-41d5-80c8-1b513b7c28b6) to 5.3 (client).
+[I 16:25:25.943 LabApp] Restoring connection for 08e58ea1-c381-41d5-80c8-1b513b7c28b6:88dad83bce6f46678bb332087de290e0
+[I 16:25:25.968 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 16:25:25.970 LabApp] Restoring connection for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 16:25:41.684 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:25:41.686 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:26:38.569 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:27:42.091 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb
+[W 16:27:42.093 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 16:28:00.621 LabApp] Adapting from protocol version 5.1 (kernel 27404533-ce8e-4b49-93ff-0132477e97a7) to 5.3 (client).
+[I 16:28:09.990 LabApp] Starting buffering for 27404533-ce8e-4b49-93ff-0132477e97a7:acb724a00d8c4fd0885c2a14370afb0d
+[W 16:28:10.624 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb is not trusted
+[I 16:28:11.160 LabApp] Adapting from protocol version 5.1 (kernel fc0b22f0-149f-483f-a3a3-005c25c53225) to 5.3 (client).
+[I 16:28:39.198 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:30:11.128 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb
+[I 16:30:39.518 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-syllable-umap.ipynb
+[I 16:32:11.148 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/humpback-syllable-umap.ipynb
+[I 16:33:22.658 LabApp] Starting buffering for fc0b22f0-149f-483f-a3a3-005c25c53225:e2c25428859b483ea25e0bed3a4cd731
+[W 16:33:24.180 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 16:33:25.109 LabApp] Adapting from protocol version 5.1 (kernel 98fc4fd3-9c54-4da9-9a34-065514d41017) to 5.3 (client).
+[I 16:35:00.346 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb
+[W 16:35:00.348 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 16:35:25.136 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb
+[W 16:35:25.139 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 16:35:29.138 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 16:35:29.139 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 16:37:25.714 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb
+[W 16:37:25.717 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[I 16:38:04.855 LabApp] Starting buffering for 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79:4d0b6403f167479089b2511d0be1ddd4
+[W 16:38:07.466 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb is not trusted
+[W 16:38:09.335 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb is not trusted
+[W 16:38:10.100 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 16:38:11.194 LabApp] Adapting from protocol version 5.1 (kernel 66f2f873-47e1-418f-a61c-25b4a6627eb9) to 5.3 (client).
+[I 16:38:11.375 LabApp] Kernel started: 6897d04b-f64d-44cd-b06b-40949ab61d16
+[I 16:38:13.314 LabApp] Adapting from protocol version 5.1 (kernel 6897d04b-f64d-44cd-b06b-40949ab61d16) to 5.3 (client).
+[I 16:38:14.480 LabApp] Adapting from protocol version 5.1 (kernel 9ae0acb6-5a70-4fdf-8547-1d760390b51c) to 5.3 (client).
+[I 16:39:12.462 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[W 16:39:12.466 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb is not trusted
+[I 16:39:34.652 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[W 16:39:34.658 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb is not trusted
+[I 16:40:12.054 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb
+[W 16:40:12.057 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 16:40:12.603 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[W 16:40:12.605 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb is not trusted
+[I 16:40:14.548 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[I 16:42:16.100 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[I 16:44:21.262 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[I 16:46:18.599 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/munia-syllable-umap.ipynb
+[W 17:11:13.317 LabApp] WebSocket ping timeout after 119890 ms.
+[W 17:11:14.482 LabApp] WebSocket ping timeout after 119994 ms.
+[I 17:11:18.320 LabApp] Starting buffering for 6897d04b-f64d-44cd-b06b-40949ab61d16:9522ceef8b564ca7b29b902376a626ae
+[I 17:11:19.484 LabApp] Starting buffering for 9ae0acb6-5a70-4fdf-8547-1d760390b51c:db70bb7633484c4684bf016f00bfe4cc
+[W 17:11:22.593 LabApp] WebSocket ping timeout after 119951 ms.
+[W 17:11:25.112 LabApp] WebSocket ping timeout after 119911 ms.
+[W 17:11:25.945 LabApp] WebSocket ping timeout after 119820 ms.
+[W 17:11:25.970 LabApp] WebSocket ping timeout after 119841 ms.
+[I 17:11:27.594 LabApp] Starting buffering for 3bcbaa8f-8279-4b6f-955a-6537a82c1757:ce83cdadc3d54b05a3daa3e942bc1199
+[I 17:11:30.114 LabApp] Starting buffering for 98fc4fd3-9c54-4da9-9a34-065514d41017:4aa57af1b49a48ea9c6af3bb0ec5edb8
+[I 17:11:30.947 LabApp] Starting buffering for 08e58ea1-c381-41d5-80c8-1b513b7c28b6:88dad83bce6f46678bb332087de290e0
+[I 17:11:30.972 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[W 17:11:41.201 LabApp] WebSocket ping timeout after 119924 ms.
+[I 17:11:46.203 LabApp] Starting buffering for 66f2f873-47e1-418f-a61c-25b4a6627eb9:9c940072363b43ae87e03776abaaab34
+[I 17:32:57.956 LabApp] Adapting from protocol version 5.1 (kernel 66f2f873-47e1-418f-a61c-25b4a6627eb9) to 5.3 (client).
+[I 17:32:57.958 LabApp] Restoring connection for 66f2f873-47e1-418f-a61c-25b4a6627eb9:9c940072363b43ae87e03776abaaab34
+[I 17:34:47.397 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[W 17:34:47.400 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb is not trusted
+2019-10-15 17:36:36.123047: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-15 17:36:36.151516: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-10-15 17:36:36.151598: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: txori
+2019-10-15 17:36:36.151623: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: txori
+2019-10-15 17:36:36.151755: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 410.79.0
+2019-10-15 17:36:36.151826: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 410.79.0
+2019-10-15 17:36:36.151851: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 410.79.0
+2019-10-15 17:36:36.204146: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2600090000 Hz
+2019-10-15 17:36:36.205860: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5571fdbd4d20 executing computations on platform Host. Devices:
+2019-10-15 17:36:36.205924: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+[I 17:36:48.198 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:38:47.054 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:39:26.299 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 17:39:26.300 LabApp] Restoring connection for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+2019-10-15 17:40:08.160184: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-15 17:40:08.181688: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-10-15 17:40:08.181820: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: txori
+2019-10-15 17:40:08.181836: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: txori
+2019-10-15 17:40:08.181988: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 410.79.0
+2019-10-15 17:40:08.182068: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 410.79.0
+2019-10-15 17:40:08.182085: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 410.79.0
+2019-10-15 17:40:08.309202: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2600090000 Hz
+2019-10-15 17:40:08.310635: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56171321bc90 executing computations on platform Host. Devices:
+2019-10-15 17:40:08.310681: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+[I 17:41:06.978 LabApp] Kernel interrupted: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 17:41:11.238 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[W 17:41:11.241 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb is not trusted
+[I 17:41:45.355 LabApp] Kernel interrupted: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 17:41:55.329 LabApp] Kernel interrupted: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 17:42:47.065 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:44:20.392 LabApp] Kernel interrupted: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 17:44:47.055 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:45:05.041 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:45:13.627 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:46:39.282 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:46:53.255 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[W 17:47:13.097 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/starling-umap.ipynb is not trusted
+[I 17:47:17.603 LabApp] Adapting from protocol version 5.1 (kernel 6897d04b-f64d-44cd-b06b-40949ab61d16) to 5.3 (client).
+[W 17:47:18.466 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 17:47:18.653 LabApp] Adapting from protocol version 5.1 (kernel b1475146-df01-419d-ab38-cc741375fc46) to 5.3 (client).
+[W 17:47:19.133 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/zf-lib-syllable-umap.ipynb is not trusted
+[W 17:47:22.977 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/mouse-usv-syllable-umap.ipynb is not trusted
+[I 17:47:23.120 LabApp] Adapting from protocol version 5.1 (kernel 08e58ea1-c381-41d5-80c8-1b513b7c28b6) to 5.3 (client).
+[I 17:47:23.127 LabApp] Starting buffering for 6897d04b-f64d-44cd-b06b-40949ab61d16:d1a2de18a95241c786ea66ec9b119150
+[I 17:47:23.364 LabApp] Adapting from protocol version 5.1 (kernel 33b45f22-5576-43e2-97b7-a32613fce2a4) to 5.3 (client).
+[I 17:47:23.843 LabApp] Kernel shutdown: 6897d04b-f64d-44cd-b06b-40949ab61d16
+[I 17:47:23.858 LabApp] Adapting from protocol version 5.1 (kernel 27404533-ce8e-4b49-93ff-0132477e97a7) to 5.3 (client).
+[I 17:47:23.858 LabApp] Adapting from protocol version 5.1 (kernel 98fc4fd3-9c54-4da9-9a34-065514d41017) to 5.3 (client).
+[I 17:47:24.348 LabApp] Adapting from protocol version 5.1 (kernel fc0b22f0-149f-483f-a3a3-005c25c53225) to 5.3 (client).
+[I 17:47:24.603 LabApp] Adapting from protocol version 5.1 (kernel 3bcbaa8f-8279-4b6f-955a-6537a82c1757) to 5.3 (client).
+[I 17:47:25.012 LabApp] Adapting from protocol version 5.1 (kernel 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79) to 5.3 (client).
+[I 17:47:28.548 LabApp] Starting buffering for b1475146-df01-419d-ab38-cc741375fc46:10c10bfd5dc9461197cf7d6403c73df8
+[I 17:47:28.954 LabApp] Kernel shutdown: b1475146-df01-419d-ab38-cc741375fc46
+[I 17:47:29.421 LabApp] Adapting from protocol version 5.1 (kernel 9ae0acb6-5a70-4fdf-8547-1d760390b51c) to 5.3 (client).
+[I 17:47:33.737 LabApp] Starting buffering for 08e58ea1-c381-41d5-80c8-1b513b7c28b6:d18954efce1c4492a444f99256b2dcdd
+[I 17:47:34.144 LabApp] Kernel shutdown: 08e58ea1-c381-41d5-80c8-1b513b7c28b6
+[I 17:47:36.760 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 17:47:36.761 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 17:47:37.690 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb
+[W 17:47:37.691 LabApp] Notebook avgn_paper/notebooks/2.0-project-UMAP/4.0-marmoset-dataset-umap.ipynb is not trusted
+[I 17:47:41.734 LabApp] Kernel shutdown: 33b45f22-5576-43e2-97b7-a32613fce2a4
+[I 17:47:48.181 LabApp] Starting buffering for 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79:2f8bbeaeea364deb81d11f403dcdca52
+[I 17:47:49.390 LabApp] Kernel shutdown: 9eb35b93-8ad3-4ee2-bf16-4ff16ea2ff79
+[I 17:47:54.156 LabApp] Starting buffering for 27404533-ce8e-4b49-93ff-0132477e97a7:aa4e531717ea427184f83ece3ad5770a
+[I 17:47:54.563 LabApp] Kernel shutdown: 27404533-ce8e-4b49-93ff-0132477e97a7
+[I 17:47:59.133 LabApp] Starting buffering for 9ae0acb6-5a70-4fdf-8547-1d760390b51c:d42ccfcd968243a894d732387b3d08b9
+[I 17:48:01.042 LabApp] Kernel shutdown: 9ae0acb6-5a70-4fdf-8547-1d760390b51c
+[I 17:48:04.462 LabApp] Starting buffering for fc0b22f0-149f-483f-a3a3-005c25c53225:5087b6f0f71b4a018161520db6064317
+[I 17:48:05.369 LabApp] Kernel shutdown: fc0b22f0-149f-483f-a3a3-005c25c53225
+[I 17:48:08.587 LabApp] Starting buffering for 3bcbaa8f-8279-4b6f-955a-6537a82c1757:4e6634d8cca7490384229ae807998a0d
+[I 17:48:10.397 LabApp] Kernel shutdown: 3bcbaa8f-8279-4b6f-955a-6537a82c1757
+[I 17:48:14.660 LabApp] Starting buffering for 98fc4fd3-9c54-4da9-9a34-065514d41017:fc08b2bbaf934b4885c641e898c6c9ea
+[I 17:48:16.068 LabApp] Kernel shutdown: 98fc4fd3-9c54-4da9-9a34-065514d41017
+[I 17:48:22.790 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 17:48:25.413 LabApp] Kernel restarted: 2d3054ae-066c-4998-bf0a-040fd272b76e
+[I 17:48:27.012 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 17:48:27.013 LabApp] Restoring connection for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 17:48:27.013 LabApp] Replaying 6 buffered messages
+[I 17:48:47.050 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+2019-10-15 17:49:04.675150: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-15 17:49:09.374470: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-10-15 17:49:09.374575: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: txori
+2019-10-15 17:49:09.374594: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: txori
+2019-10-15 17:49:09.374814: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 410.79.0
+2019-10-15 17:49:09.374874: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 410.79.0
+2019-10-15 17:49:09.374890: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 410.79.0
+2019-10-15 17:49:09.454014: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2600090000 Hz
+2019-10-15 17:49:09.455828: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557b8e40ab00 executing computations on platform Host. Devices:
+2019-10-15 17:49:09.455877: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+[I 17:49:10.932 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[I 17:50:00.838 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/canary-syllable-umap.ipynb
+[I 17:50:26.571 LabApp] Starting buffering for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 17:50:28.900 LabApp] Kernel restarted: 2d3054ae-066c-4998-bf0a-040fd272b76e
+[I 17:50:28.977 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[I 17:50:30.673 LabApp] Adapting from protocol version 5.1 (kernel 2d3054ae-066c-4998-bf0a-040fd272b76e) to 5.3 (client).
+[I 17:50:30.674 LabApp] Restoring connection for 2d3054ae-066c-4998-bf0a-040fd272b76e:36d84ae61d614f9e9b368ed0635e4435
+[I 17:50:30.674 LabApp] Replaying 6 buffered messages
+[I 17:50:49.951 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+[I 17:50:56.011 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+2019-10-15 17:51:07.137441: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+[I 17:51:09.821 LabApp] Saving file at /avgn_paper/notebooks/2.0-project-UMAP/5.0-swamp-sparrow-dataset-umap.ipynb
+2019-10-15 17:51:11.886205: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-10-15 17:51:11.886375: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: txori
+2019-10-15 17:51:11.886406: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: txori
+2019-10-15 17:51:11.886705: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 410.79.0
+2019-10-15 17:51:11.886808: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 410.79.0
+2019-10-15 17:51:11.886834: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 410.79.0
+2019-10-15 17:51:11.961483: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2600090000 Hz
+2019-10-15 17:51:11.962642: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5643fd30c520 executing computations on platform Host. Devices:
+2019-10-15 17:51:11.962673: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+[I 17:51:59.858 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 66f2f873-47e1-418f-a61c-25b4a6627eb9 restarted
+[I 17:52:01.900 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 2d3054ae-066c-4998-bf0a-040fd272b76e restarted
+[C 17:52:17.858 LabApp] received signal 15, stopping
+[I 17:52:17.859 LabApp] Shutting down 3 kernels
+[I 17:52:18.262 LabApp] Kernel shutdown: 3cd6a1dc-880a-4e21-92b5-3118b29a9780
+[I 17:52:18.564 LabApp] Kernel shutdown: 66f2f873-47e1-418f-a61c-25b4a6627eb9
+[I 17:52:18.565 LabApp] Kernel shutdown: 2d3054ae-066c-4998-bf0a-040fd272b76e
