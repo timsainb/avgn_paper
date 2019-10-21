@@ -73,6 +73,7 @@ def draw_projection_transitions(
     cmap=plt.get_cmap("cubehelix"),
     alpha=0.05,
     linewidth=3,
+    range_pad=0.1
 ):
     """ draws a line plot of each transition
     """
@@ -93,14 +94,19 @@ def draw_projection_transitions(
             linewidth=linewidth,
             alpha=alpha,
         )
-    minx, maxx, miny, maxy = (
-        np.min(projections[:, 0]),
-        np.max(projections[:, 0]),
-        np.min(projections[:, 1]),
-        np.max(projections[:, 1]),
-    )
-    ax.set_xlim((minx, maxx))
-    ax.set_ylim((miny, maxy))
+    xmin, xmax = np.sort(np.vstack(projections)[:, 0])[
+        np.array([int(len(projections) * 0.01), int(len(projections) * 0.99)])
+    ]
+    ymin, ymax = np.sort(np.vstack(projections)[:, 1])[
+        np.array([int(len(projections) * 0.01), int(len(projections) * 0.99)])
+    ]
+    xmin -= (xmax - xmin) * range_pad
+    xmax += (xmax - xmin) * range_pad
+    ymin -= (ymax - ymin) * range_pad
+    ymax += (ymax - ymin) * range_pad
+
+    ax.set_xlim((xmin, xmax))
+    ax.set_ylim((ymin, ymax))
     return ax
 
 
@@ -245,6 +251,7 @@ def scatter_spec(
     draw_lines=True,
     n_subset=-1,
     ax=None,
+    show_scatter=True
 ):
     """
     """
@@ -288,7 +295,8 @@ def scatter_spec(
     # prepare the main axis
     main_ax = fig.add_subplot(gs[1 : column_size - 1, 1 : column_size - 1])
     # main_ax.scatter(z[:, 0], z[:, 1], **scatter_kwargs)
-    scatter_projections(projection=z, ax=main_ax, **scatter_kwargs)
+    if show_scatter:
+        scatter_projections(projection=z, ax=main_ax, **scatter_kwargs)
 
     # loop through example columns
     axs = {}

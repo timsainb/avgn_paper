@@ -18,6 +18,7 @@ def plot_network_graph(
     color_palette="tab20",
     ax=None,
     min_cluster_samples=0,
+    pal_dict = None
 ):
     """
     """
@@ -51,8 +52,11 @@ def plot_network_graph(
     pos = {i: element_centers[element_dict_r[i]] for i in pos.keys()}
 
     # get the palette
-    label_palette = sns.color_palette(color_palette, len(np.unique(elements)))
-    pos_colors = [label_palette[i] for i in list(pos.keys())]
+    if pal_dict is None:
+        label_palette = sns.color_palette(color_palette, len(np.unique(elements)))
+        pos_colors = [label_palette[i] for i in list(pos.keys())]
+    else:
+        pos_colors = [pal_dict[element_dict_r[i]] for i in pos.keys()]
 
     # get locations
     pos_locs = np.vstack(pos.values())
