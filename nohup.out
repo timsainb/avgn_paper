@@ -537,3 +537,324 @@ kernel 2d3054ae-066c-4998-bf0a-040fd272b76e restarted
 [I 17:52:18.262 LabApp] Kernel shutdown: 3cd6a1dc-880a-4e21-92b5-3118b29a9780
 [I 17:52:18.564 LabApp] Kernel shutdown: 66f2f873-47e1-418f-a61c-25b4a6627eb9
 [I 17:52:18.565 LabApp] Kernel shutdown: 2d3054ae-066c-4998-bf0a-040fd272b76e
+[I 13:40:39.088 LabApp] The port 8187 is already in use, trying another port.
+[I 13:40:39.118 LabApp] The port 8188 is already in use, trying another port.
+[W 13:40:39.127 LabApp] Error loading server extension jupyter_nbextensions_configurator
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/notebookapp.py", line 1615, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyter_nbextensions_configurator'
+[I 13:40:39.138 LabApp] JupyterLab extension loaded from /home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/jupyterlab
+[I 13:40:39.138 LabApp] JupyterLab application directory is /home/AD/tsainbur/anaconda3/envs/py19/share/jupyter/lab
+[W 13:40:39.143 LabApp] Error loading server extension jupyterlab_code_formatter
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/notebookapp.py", line 1615, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyterlab_code_formatter'
+[I 13:40:39.144 LabApp] Serving notebooks from local directory: /home/AD/tsainbur/github_repos
+[I 13:40:39.144 LabApp] The Jupyter Notebook is running at:
+[I 13:40:39.144 LabApp] http://localhost:8189/?token=bd53599c5969af4b92f1338aacd19759a9f382008dc5c61a
+[I 13:40:39.144 LabApp]  or http://127.0.0.1:8189/?token=bd53599c5969af4b92f1338aacd19759a9f382008dc5c61a
+[I 13:40:39.144 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:40:39.155 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///local/home/tsainbur/.local/share/jupyter/runtime/nbserver-7468-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8189/?token=bd53599c5969af4b92f1338aacd19759a9f382008dc5c61a
+     or http://127.0.0.1:8189/?token=bd53599c5969af4b92f1338aacd19759a9f382008dc5c61a
+[W 13:40:48.319 LabApp] Clearing invalid/expired login cookie username-localhost-8189
+[W 13:40:48.321 LabApp] Forbidden
+[W 13:40:48.322 LabApp] 403 GET /api/sessions?1571690448324 (::1) 4.39ms referer=http://localhost:8189/lab
+[W 13:40:48.324 LabApp] Clearing invalid/expired login cookie username-localhost-8189
+[W 13:40:48.325 LabApp] Forbidden
+[W 13:40:48.326 LabApp] 403 GET /api/terminals?1571690448325 (::1) 2.35ms referer=http://localhost:8189/lab
+[W 13:40:58.319 LabApp] Forbidden
+[W 13:40:58.319 LabApp] 403 GET /api/terminals?1571690458326 (::1) 3.39ms referer=http://localhost:8189/lab
+[W 13:40:58.320 LabApp] Forbidden
+[W 13:40:58.321 LabApp] 403 GET /api/sessions?1571690458325 (::1) 3.24ms referer=http://localhost:8189/lab
+[W 13:41:06.048 LabApp] Couldn't authenticate WebSocket connection
+[W 13:41:06.106 LabApp] 403 GET /api/kernels/9b38ef34-57ae-4ab1-8720-17f9dd85f29f/channels?session_id=6debf906-f997-4ced-a3ec-9829147dc4a9&token=f3c5d96827bce2f7d647418268b763cc4e2cb68608809b0c (::1) 61.22ms referer=None
+[W 13:41:06.128 LabApp] Couldn't authenticate WebSocket connection
+[W 13:41:06.129 LabApp] 403 GET /api/kernels/9b38ef34-57ae-4ab1-8720-17f9dd85f29f/channels?session_id=f656359d-86b9-4692-9a72-f23d0da7b976&token=f3c5d96827bce2f7d647418268b763cc4e2cb68608809b0c (::1) 3.92ms referer=None
+[W 13:41:08.316 LabApp] Forbidden
+[W 13:41:08.317 LabApp] 403 GET /api/terminals?1571690468324 (::1) 3.06ms referer=http://localhost:8189/lab
+[W 13:41:08.318 LabApp] Forbidden
+[W 13:41:08.318 LabApp] 403 GET /api/sessions?1571690468324 (::1) 3.03ms referer=http://localhost:8189/lab
+[W 13:41:18.321 LabApp] Forbidden
+[W 13:41:18.322 LabApp] 403 GET /api/sessions?1571690478328 (::1) 2.37ms referer=http://localhost:8189/lab
+[W 13:41:18.324 LabApp] Forbidden
+[W 13:41:18.324 LabApp] 403 GET /api/terminals?1571690478329 (::1) 1.76ms referer=http://localhost:8189/lab
+[W 13:41:28.317 LabApp] Forbidden
+[W 13:41:28.317 LabApp] 403 GET /api/sessions?1571690488324 (::1) 3.51ms referer=http://localhost:8189/lab
+[W 13:41:28.318 LabApp] Forbidden
+[W 13:41:28.319 LabApp] 403 GET /api/terminals?1571690488325 (::1) 3.24ms referer=http://localhost:8189/lab
+[C 13:41:32.686 LabApp] received signal 15, stopping
+[I 13:41:32.688 LabApp] Shutting down 0 kernels
+[W 13:41:51.576 LabApp] Error loading server extension jupyter_nbextensions_configurator
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/notebookapp.py", line 1615, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyter_nbextensions_configurator'
+[I 13:41:51.581 LabApp] JupyterLab extension loaded from /home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/jupyterlab
+[I 13:41:51.581 LabApp] JupyterLab application directory is /home/AD/tsainbur/anaconda3/envs/py19/share/jupyter/lab
+[W 13:41:51.584 LabApp] Error loading server extension jupyterlab_code_formatter
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/notebookapp.py", line 1615, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyterlab_code_formatter'
+[I 13:41:51.584 LabApp] Serving notebooks from local directory: /home/AD/tsainbur/github_repos
+[I 13:41:51.584 LabApp] The Jupyter Notebook is running at:
+[I 13:41:51.584 LabApp] http://localhost:8187/?token=b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e
+[I 13:41:51.584 LabApp]  or http://127.0.0.1:8187/?token=b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e
+[I 13:41:51.585 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:41:51.590 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///local/home/tsainbur/.local/share/jupyter/runtime/nbserver-7490-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8187/?token=b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e
+     or http://127.0.0.1:8187/?token=b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e
+[W 13:41:54.378 LabApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20191021134151 (::1) 13.49ms referer=http://localhost:8187/tree/avgn_paper/figures/barcode/bengalese_finch_sober
+[W 13:41:58.680 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 9.11ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 13:41:58.880 LabApp] Kernel started: 978d9916-af35-4406-97da-0a0aa693d3c0
+[W 13:41:58.923 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 2.17ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 13:42:08.995 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[I 13:43:59.564 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 13:46:33.859 LabApp] Build is up to date
+[I 13:46:34.957 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[I 13:46:43.491 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[W 13:47:24.092 LabApp] 404 GET /nbextensions (::1) 3.83ms referer=None
+[I 13:47:34.617 LabApp] 302 GET / (::1) 0.95ms
+[I 13:47:35.265 LabApp] 301 GET /lab/workspaces/auto-g/?clone (::1) 5.20ms
+[I 13:47:36.327 LabApp] Build is up to date
+[I 13:47:37.248 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[I 13:47:45.917 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[I 13:49:37.205 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 13:51:05.850 LabApp] Kernel interrupted: 978d9916-af35-4406-97da-0a0aa693d3c0
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/sklearn/__init__.py", line 64, in <module>
+    from .base import clone
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/sklearn/base.py", line 13, in <module>
+    from .utils.fixes import signature
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/sklearn/utils/__init__.py", line 16, in <module>
+    from .fixes import _Sequence as Sequence
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/sklearn/utils/fixes.py", line 92, in <module>
+    from scipy.sparse.linalg import lsqr as sparse_lsqr  # noqa
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/scipy/sparse/linalg/__init__.py", line 114, in <module>
+    from .isolve import *
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/__init__.py", line 6, in <module>
+    from .iterative import *
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/iterative.py", line 14, in <module>
+    from .utils import make_system
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 764, in get_code
+  File "<frozen importlib._bootstrap_external>", line 832, in get_data
+KeyboardInterrupt
+[I 13:51:11.585 LabApp] Kernel interrupted: 978d9916-af35-4406-97da-0a0aa693d3c0
+[I 13:51:14.575 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 13:53:14.775 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+2019-10-21 13:57:00.526271: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-21 13:57:05.366068: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-10-21 13:57:05.366210: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: txori
+2019-10-21 13:57:05.366241: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: txori
+2019-10-21 13:57:05.366455: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 410.79.0
+2019-10-21 13:57:05.366559: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 410.79.0
+2019-10-21 13:57:05.366587: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 410.79.0
+2019-10-21 13:57:05.405559: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599870000 Hz
+2019-10-21 13:57:05.406696: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55a6e1e56360 executing computations on platform Host. Devices:
+2019-10-21 13:57:05.406727: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+[I 13:57:15.003 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[IPKernelApp] WARNING | No such comm: b9a7101ba5ea4dc79afc189bbb3c5790
+[IPKernelApp] WARNING | No such comm: 679abbb5e73c4c62834b62af417c8576
+[IPKernelApp] WARNING | No such comm: 00495ad95f2c44b3b06d044f2906dbf5
+[IPKernelApp] WARNING | No such comm: 1f55de03bdda469c9c1bc270c7493de7
+[IPKernelApp] WARNING | No such comm: 2a9c95e851fc4db29c8149483f3472af
+[IPKernelApp] WARNING | No such comm: a310431fc3cb4db1b64aec4dad986073
+[IPKernelApp] WARNING | No such comm: 6b642d24cb3548cc8db06d7eaa707d3f
+[IPKernelApp] WARNING | No such comm: 8ff4cf5853c641fa8f6220487a0b6ef3
+[IPKernelApp] WARNING | No such comm: b8a87c7350ad433baef0874dbd1a7242
+[IPKernelApp] WARNING | No such comm: 9febedf1777a4dd4b399983b49cd3581
+[IPKernelApp] WARNING | No such comm: 8e77df261b1f4725b4db76f12f55516a
+[IPKernelApp] WARNING | No such comm: 3adfadaf4d5f45c4b1586ffa85c32346
+[IPKernelApp] WARNING | No such comm: 62fcd7612e7245ee94c97539f2bf6d60
+[IPKernelApp] WARNING | No such comm: 17b711c809194159aa5a927e8735201d
+[IPKernelApp] WARNING | No such comm: 4319ea617795461fac371622a5bc8526
+[IPKernelApp] WARNING | No such comm: 64c6882bdf4c4d8daac30ee5feabeb6e
+[IPKernelApp] WARNING | No such comm: 64c6882bdf4c4d8daac30ee5feabeb6e
+[I 13:59:15.221 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:21:20.241 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:23:20.534 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:33:20.790 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:33:23.379 LabApp] Kernel started: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[I 14:33:38.951 LabApp] Kernel restarted: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[I 14:33:44.467 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/bf-sober-transitions-barcode.ipynb
+[I 14:34:17.594 LabApp] Kernel interrupted: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+Traceback (most recent call last):
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/ipykernel_launcher.py", line 15, in <module>
+    from ipykernel import kernelapp as app
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/ipykernel/__init__.py", line 2, in <module>
+    from .connect import *
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/ipykernel/connect.py", line 13, in <module>
+    from IPython.core.profiledir import ProfileDir
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/IPython/__init__.py", line 55, in <module>
+    from .terminal.embed import embed
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/IPython/terminal/embed.py", line 16, in <module>
+    from IPython.terminal.interactiveshell import TerminalInteractiveShell
+  File "/mnt/cube/tsainbur/conda_envs/tpy3/lib/python3.6/site-packages/IPython/terminal/interactiveshell.py", line 33, in <module>
+    from .debugger import TerminalPdb, Pdb
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 764, in get_code
+  File "<frozen importlib._bootstrap_external>", line 832, in get_data
+KeyboardInterrupt
+[I 14:34:20.951 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+[I 14:34:27.048 LabApp] Kernel restarted: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[W 14:34:27.051 LabApp] Timeout waiting for kernel_info reply from 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[I 14:34:32.151 LabApp] Kernel restarted: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[I 14:34:32.209 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/bf-sober-transitions-barcode.ipynb
+[W 14:34:38.369 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 3.78ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/2.0-make-syllable_df/humpback-whale-syllable_df.ipynb
+[W 14:34:38.954 LabApp] Timeout waiting for kernel_info_reply: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[E 14:34:38.955 LabApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 83, in post
+        yield maybe_future(km.restart_kernel(kernel_id))
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 742, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/kernelmanager.py", line 345, in restart_kernel
+        yield future
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+    tornado.util.TimeoutError: Timeout waiting for restart
+[E 14:34:38.957 LabApp] {
+      "Host": "localhost:8187",
+      "Connection": "keep-alive",
+      "Content-Length": "0",
+      "Sec-Fetch-Mode": "cors",
+      "Origin": "http://localhost:8187",
+      "Authorization": "token b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e",
+      "X-Xsrftoken": "2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Referer": "http://localhost:8187/lab/workspaces/auto-g",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,fr;q=0.8",
+      "Cookie": "_ga=GA1.1.2135320950.1566148815; username-localhost-8195=\"2|1:0|10:1570831591|23:username-localhost-8195|44:Y2Q0M2Y0YjJhMDQxNDQwZThhOGNjZTdhNDFiNDNkNjI=|4fc2d73bc3298178be788038ba7812e8e7e1ca4ae1891ffcc42a6bd3445055ab\"; username-localhost-8186=\"2|1:0|10:1570831618|23:username-localhost-8186|44:OGQ0ZDZhMzA0OGU3NGJjNmE3ZWQzZTNlNjE0OTE5YTc=|c35b67c47b69b28e578cd086622671b22c440c459eb1f804d2a3d6e6da842624\"; _xsrf=2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215; username-localhost-8187=\"2|1:0|10:1571693609|23:username-localhost-8187|44:NjBlZTdmZjFiYzkxNGU2NmFmYmI2ZjdiYzIwMGVhYmQ=|e57148debb7068526bf27674a3e72ff297f23f43d201046f549ada1931a9b294\""
+    }
+[E 14:34:38.957 LabApp] 500 POST /api/kernels/5e7b4be6-7cfb-4bed-be7a-1317135b8c1c/restart?1571693613909 (::1) 65043.63ms referer=http://localhost:8187/lab/workspaces/auto-g
+[I 14:34:39.582 LabApp] Kernel started: babf27cf-00b4-45ab-82dd-018ae6524543
+[W 14:34:39.599 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 4.21ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/2.0-make-syllable_df/humpback-whale-syllable_df.ipynb
+[W 14:34:52.887 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 18.03ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:34:53.386 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[W 14:34:53.402 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 3.57ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:35:07.271 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[W 14:35:27.051 LabApp] Timeout waiting for kernel_info_reply: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[E 14:35:27.052 LabApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 83, in post
+        yield maybe_future(km.restart_kernel(kernel_id))
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 742, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/kernelmanager.py", line 345, in restart_kernel
+        yield future
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+    tornado.util.TimeoutError: Timeout waiting for restart
+[E 14:35:27.053 LabApp] {
+      "Host": "localhost:8187",
+      "Connection": "keep-alive",
+      "Content-Length": "0",
+      "Sec-Fetch-Mode": "cors",
+      "Origin": "http://localhost:8187",
+      "Authorization": "token b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e",
+      "X-Xsrftoken": "2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Referer": "http://localhost:8187/lab/workspaces/auto-g",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,fr;q=0.8",
+      "Cookie": "_ga=GA1.1.2135320950.1566148815; username-localhost-8195=\"2|1:0|10:1570831591|23:username-localhost-8195|44:Y2Q0M2Y0YjJhMDQxNDQwZThhOGNjZTdhNDFiNDNkNjI=|4fc2d73bc3298178be788038ba7812e8e7e1ca4ae1891ffcc42a6bd3445055ab\"; username-localhost-8186=\"2|1:0|10:1570831618|23:username-localhost-8186|44:OGQ0ZDZhMzA0OGU3NGJjNmE3ZWQzZTNlNjE0OTE5YTc=|c35b67c47b69b28e578cd086622671b22c440c459eb1f804d2a3d6e6da842624\"; _xsrf=2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215; username-localhost-8187=\"2|1:0|10:1571693659|23:username-localhost-8187|44:YzlmZTg0MDY3NmUyNDE2NTg2OGRjMTBjZWI5OTZkZjQ=|6b1de8e438b105316a4e7bd61d9efadf0c2de8497cc288e739e919c5dfeed4ff\""
+    }
+[E 14:35:27.053 LabApp] 500 POST /api/kernels/5e7b4be6-7cfb-4bed-be7a-1317135b8c1c/restart?1571693661780 (::1) 65262.20ms referer=http://localhost:8187/lab/workspaces/auto-g
+[W 14:35:32.154 LabApp] Timeout waiting for kernel_info_reply: 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c
+[E 14:35:32.155 LabApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 83, in post
+        yield maybe_future(km.restart_kernel(kernel_id))
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 742, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/notebook/services/kernels/kernelmanager.py", line 345, in restart_kernel
+        yield future
+      File "/home/AD/tsainbur/anaconda3/envs/py19/lib/python3.6/site-packages/tornado/gen.py", line 735, in run
+        value = future.result()
+    tornado.util.TimeoutError: Timeout waiting for restart
+[E 14:35:32.156 LabApp] {
+      "Host": "localhost:8187",
+      "Connection": "keep-alive",
+      "Content-Length": "0",
+      "Sec-Fetch-Mode": "cors",
+      "Origin": "http://localhost:8187",
+      "Authorization": "token b4ed1a543622a3b1aba049c8e4efa3b834277ab07c15002e",
+      "X-Xsrftoken": "2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Referer": "http://localhost:8187/lab/workspaces/auto-g",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,fr;q=0.8",
+      "Cookie": "_ga=GA1.1.2135320950.1566148815; username-localhost-8195=\"2|1:0|10:1570831591|23:username-localhost-8195|44:Y2Q0M2Y0YjJhMDQxNDQwZThhOGNjZTdhNDFiNDNkNjI=|4fc2d73bc3298178be788038ba7812e8e7e1ca4ae1891ffcc42a6bd3445055ab\"; username-localhost-8186=\"2|1:0|10:1570831618|23:username-localhost-8186|44:OGQ0ZDZhMzA0OGU3NGJjNmE3ZWQzZTNlNjE0OTE5YTc=|c35b67c47b69b28e578cd086622671b22c440c459eb1f804d2a3d6e6da842624\"; _xsrf=2|2b997e67|29d4ea20755e92079558d090866cac7e|1571165215; username-localhost-8187=\"2|1:0|10:1571693659|23:username-localhost-8187|44:YzlmZTg0MDY3NmUyNDE2NTg2OGRjMTBjZWI5OTZkZjQ=|6b1de8e438b105316a4e7bd61d9efadf0c2de8497cc288e739e919c5dfeed4ff\""
+    }
+[E 14:35:32.156 LabApp] 500 POST /api/kernels/5e7b4be6-7cfb-4bed-be7a-1317135b8c1c/restart?1571693666267 (::1) 65101.49ms referer=http://localhost:8187/lab/workspaces/auto-g
+[W 14:35:39.787 LabApp] Timeout waiting for kernel_info reply from babf27cf-00b4-45ab-82dd-018ae6524543
+[I 14:35:43.831 LabApp] Kernel interrupted: 978d9916-af35-4406-97da-0a0aa693d3c0
+[I 14:35:47.905 LabApp] Saving file at /avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[I 14:36:13.516 LabApp] Starting buffering for 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c:2ac05d41-5ce9-4373-90c1-b827a06a616d
+[I 14:36:55.790 LabApp] Adapting from protocol version 5.1 (kernel 5e7b4be6-7cfb-4bed-be7a-1317135b8c1c) to 5.3 (client).
+[W 14:36:55.793 LabApp] zmq message arrived on closed channel
+[W 14:36:55.796 LabApp] zmq message arrived on closed channel
+[W 14:36:55.797 LabApp] zmq message arrived on closed channel
+[I 14:36:55.799 LabApp] Adapting from protocol version 5.1 (kernel babf27cf-00b4-45ab-82dd-018ae6524543) to 5.3 (client).
+[I 14:37:42.896 LabApp] Adapting from protocol version 5.1 (kernel 978d9916-af35-4406-97da-0a0aa693d3c0) to 5.3 (client).
+[W 14:37:43.399 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 3.58ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
+[W 14:37:44.440 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 3.45ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/5.0-visualize-transitions/humpback-PCA-projections.ipynb
