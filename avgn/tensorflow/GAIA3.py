@@ -49,18 +49,18 @@ class GAIA(tf.keras.Model):
         z, xg, zi, xi, d_xi, d_x, d_xg = self.network_pass(x)
 
         # compute losses
-        X_D_G_X_loss = self.regularization(x, d_xg)
-        X_D_G_Zi_loss = self.regularization(xi, d_xi)
+        X_D_G_X_loss = tf.clip_by_value(self.regularization(x, d_xg), 0, 1)
+        X_D_G_Zi_loss = tf.clip_by_value(self.regularization(xi, d_xi), 0, 1)
         X_G_loss = (X_D_G_Zi_loss + X_D_G_X_loss) / 2.0
-        X_D_X_loss = self.regularization(x, d_x)
+        X_D_X_loss = tf.clip_by_value(self.regularization(x, d_x), 0, 1)
 
-        self.sigma = 0.5
+        self.sigma = 1.0
         self.lr_sigma_slope = 20.0
 
         # losses specific to networks
         D_prop_gen = tf.clip_by_value(
             sigmoid(
-                X_D_G_Zi_loss * self.sigma - X_D_X_loss,
+                (X_D_X_loss - X_D_G_X_loss * self.sigma) / X_D_G_Zi_loss,
                 shift=0.0,
                 mult=self.lr_sigma_slope,
             ),
@@ -75,7 +75,7 @@ class GAIA(tf.keras.Model):
 
         # add losses for generator and descriminator
         # loss of Encoder/Decoder: reconstructing x_real well and x_fake poorly
-        D_loss = X_D_X_loss - X_G_loss * D_prop_gen * D_lr
+        D_loss = (X_D_X_loss - X_G_loss * D_prop_gen) * D_lr
 
         # hold the discrim proportion fake aways at less than half
         G_prop_i = tf.clip_by_value(
@@ -85,7 +85,7 @@ class GAIA(tf.keras.Model):
         )
 
         # Generator should be balancing the reproduction
-        G_loss = G_prop_i * X_D_G_Zi_loss + (1.0 - G_prop_i) * X_D_G_X_loss * G_lr
+        G_loss = (G_prop_i * X_D_G_Zi_loss + (1.0 - G_prop_i) * X_D_G_X_loss) * G_lr
 
         return (
             X_D_G_X_loss,
@@ -94,6 +94,8 @@ class GAIA(tf.keras.Model):
             X_D_X_loss,
             G_prop_i,
             D_prop_gen,
+            D_lr,
+            G_lr,
             G_loss,
             D_loss,
         )
@@ -101,7 +103,7 @@ class GAIA(tf.keras.Model):
     @tf.function
     def compute_gradients(self, x):
         with tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape:
-            _, _, _, _, _, _, G_loss, D_loss = self.compute_loss(x)
+            _, _, _, _, _, _, _, _, G_loss, D_loss = self.compute_loss(x)
 
             gen_loss = G_loss
             disc_loss = D_loss
@@ -166,3 +168,27 @@ def plot_reconstruction(model, example_data, nex=5, zm=3):
         axs[0, axi].set_title(lab)
 
     plt.show()
+
+
+def distance_loss(x, z_x):
+    """ Loss based on the distance between elements in a batch
+    """
+    z_x = tf.reshape(z_x, [shape(z_x)[0], np.prod(shape(z_x)[1:])])
+    sdx = squared_dist(x)
+    sdx = sdx / tf.reduce_mean(sdx)
+    sdz = squared_dist(z_x)
+    sdz = sdz / tf.reduce_mean(sdz)
+    return tf.reduce_mean(
+        tf.square(tf.log(tf.constant(1.0) + sdx) - (tf.log(tf.constant(1.0) + sdz)))
+    )
+
+
+def squared_dist(A):
+    """
+    Computes the pairwise distance between points
+    #http://stackoverflow.com/questions/37009647/compute-pairwise-distance-in-a-batch-without-replicating-tensor-in-tensorflow
+    """
+    expanded_a = tf.expand_dims(A, 1)
+    expanded_b = tf.expand_dims(A, 0)
+    distances = tf.reduce_mean(tf.squared_difference(expanded_a, expanded_b), 2)
+    return distances
