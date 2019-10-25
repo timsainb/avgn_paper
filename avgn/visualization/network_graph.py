@@ -18,7 +18,7 @@ def plot_network_graph(
     color_palette="tab20",
     ax=None,
     min_cluster_samples=0,
-    pal_dict = None
+    pal_dict=None,
 ):
     """
     """
@@ -43,9 +43,10 @@ def plot_network_graph(
                     used_drop_list.append(drop)
         true_label.append(i + len(used_drop_list))
 
-
     # generate graph
-    graph = compute_graph(transition_matrix, min_connections=0.05, column_names = true_label)
+    graph = compute_graph(
+        transition_matrix, min_connections=0.05, column_names=true_label
+    )
 
     # graph positions
     pos = nx.random_layout(graph)
@@ -90,7 +91,7 @@ def cluster_centers(elements, locations):
     }
 
 
-def build_transition_matrix(sequences, min_cluster_samples=0):
+def build_transition_matrix(sequences, min_cluster_samples=0, ignore_elements=[-1]):
     """ builds a transition matrix from a set of sequences of discrete categories
     If there are fewer than min_cluster_samples samples for a given cluster,
      ignore it in the transition matrix
@@ -106,28 +107,39 @@ def build_transition_matrix(sequences, min_cluster_samples=0):
     # breakme
     removed_columns = []
     for ri, row in enumerate(transition_matrix):
-        if np.sum(row) < min_cluster_samples:
 
-            transition_matrix = np.delete(transition_matrix, ri-len(removed_columns), 0)
-            transition_matrix = np.delete(transition_matrix, ri-len(removed_columns), 1)
+        if (np.sum(row) < min_cluster_samples) or (
+            unique_elements[ri - len(removed_columns)] in ignore_elements
+        ):
+
+            transition_matrix = np.delete(
+                transition_matrix, ri - len(removed_columns), 0
+            )
+            transition_matrix = np.delete(
+                transition_matrix, ri - len(removed_columns), 1
+            )
+            unique_elements = np.delete(unique_elements, ri - len(removed_columns))
             removed_columns.append(ri)
+
     transition_matrix = transition_matrix / np.sum(transition_matrix, axis=0)
     return transition_matrix, element_dict, removed_columns
 
 
-def compute_graph(dense_matrix, min_connections=0.05, column_names = None):
+def compute_graph(dense_matrix, min_connections=0.05, column_names=None):
     # Add all nodes to the list
     G = nx.DiGraph()
     # For each item in the node list get outgoing connection of the
     #   *last* item in the list from the dense array
     if column_names is None:
         column_names = np.arange(len(dense_matrix))
-        
+
     for out_node in np.arange(len(dense_matrix)):
         in_list = np.array(np.where(dense_matrix[out_node] > min_connections)[0])
         for ini, in_node in enumerate(in_list):
             G.add_edge(column_names[out_node], column_names[in_node])
-            G[column_names[out_node]][column_names[in_node]]["weight"] = dense_matrix[out_node][in_node]
+            G[column_names[out_node]][column_names[in_node]]["weight"] = dense_matrix[
+                out_node
+            ][in_node]
     return G
 
 

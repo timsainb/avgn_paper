@@ -53,13 +53,29 @@ def unzip_file(zip_path, directory_to_extract_to):
                 print(e)
 
 
-def save_fig(loc, dpi = 300, save_pdf=False, save_svg=False, save_png=False, save_jpg=True):
+def save_fig(
+    loc, dpi=300, save_pdf=False, save_svg=False, save_png=False, save_jpg=True
+):
     if save_pdf:
         plt.savefig(str(loc) + ".pdf", dpi=dpi, bbox_inches="tight", pad_inches=0)
     if save_svg:
-        plt.savefig(str(loc) + ".svg", dpi=dpi, bbox_inches="tight", pad_inches=0)
+        plt.savefig(
+            str(loc) + ".svg",
+            dpi=dpi,
+            bbox_inches="tight",
+            pad_inches=0,
+            transparent=True,
+        )
     if save_png:
-        plt.savefig(str(loc) + ".png", dpi=dpi, bbox_inches="tight", pad_inches=0)
+        plt.savefig(
+            str(loc) + ".png",
+            dpi=dpi,
+            bbox_inches="tight",
+            pad_inches=0,
+            transparent=True,
+        )
     if save_jpg:
-        plt.savefig(str(loc) + ".jpg", dpi=int(dpi/2), bbox_inches="tight", pad_inches=0)
+        plt.savefig(
+            str(loc) + ".jpg", dpi=int(dpi / 2), bbox_inches="tight", pad_inches=0
+        )
 

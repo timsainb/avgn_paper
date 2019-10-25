@@ -40,7 +40,7 @@ def indv_barcode(indv_df, time_resolution=0.02, label="labels", pal="tab20"):
     unique_labels = indv_df[label].unique()
     # song palette
     label_pal = np.random.permutation(sns.color_palette(pal, len(unique_labels)))
-    label_dict = {lab: str(int(i + 1)).zfill(3) for i, lab in enumerate(unique_labels)}
+    label_dict = {lab: str(int(i)).zfill(3) for i, lab in enumerate(unique_labels)}
 
     label_pal_dict = {
         label_dict[lab]: color for lab, color in zip(unique_labels, label_pal)

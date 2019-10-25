@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle
 import seaborn as sns
+from tqdm.autonotebook import tqdm
 
 
 def plot_example_specs(
@@ -182,6 +183,7 @@ def plot_segmentations(
     plt.show()
 
 
+
 def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=2):
     """
     """
@@ -195,7 +197,7 @@ def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=
     # fill the canvas
     column_pos = 0
     row = 0
-    for speci, spec in enumerate(spectrograms):
+    for speci, spec in tqdm(enumerate(spectrograms)):
         spec_shape = np.shape(spec)
         if column_pos + spec_shape[1] > colsize:
             if row == maxrows - 1:
@@ -203,12 +205,12 @@ def draw_spec_set(spectrograms, maxrows=3, colsize=10, cmap=plt.cm.afmhot, zoom=
             row += 1
             column_pos = 0
         canvas[
-            rowsize * row : rowsize * (row + 1), column_pos : column_pos + spec_shape[1]
+            rowsize * (maxrows-1-row) : rowsize * ((maxrows-1-row) + 1), column_pos : column_pos + spec_shape[1]
         ] = spec
         column_pos += spec_shape[1]
     if row < maxrows - 1:
-        canvas = canvas[: (row + 1) * rowsize, :]
-
+        canvas = canvas[(maxrows-1-row) * rowsize:, :]
+    #print(speci)
     figsize = (zoom * (colsize / rowsize), zoom * (row + 1))
     # print(figsize, np.shape(canvas), colsize / rowsize, rowsize, colsize)
     fig, ax = plt.subplots(figsize=figsize)
