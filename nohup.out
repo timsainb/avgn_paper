@@ -10663,3 +10663,10 @@ pciBusID: 0000:84:00.0
 [I 12:13:06.216 LabApp] Kernel started: 5ffe4de3-4588-4f02-bdea-140007678a54
 [W 12:13:06.264 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 4.14ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
 [I 12:13:08.983 LabApp] Adapting from protocol version 5.1 (kernel 5ffe4de3-4588-4f02-bdea-140007678a54) to 5.3 (client).
+[W 12:13:48.504 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 4.39ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Starling-AE.ipynb
+[I 12:13:49.320 LabApp] Adapting from protocol version 5.1 (kernel 68fe739f-0fae-442f-860e-d943da609e51) to 5.3 (client).
+[W 12:13:49.332 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 1.75ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Starling-AE.ipynb
+[I 12:15:06.625 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Starling-128-GAIA.ipynb
+[I 12:15:50.874 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Starling-AE.ipynb
+[I 12:17:07.026 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Starling-128-GAIA.ipynb
+[I 12:19:06.624 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Starling-128-GAIA.ipynb
