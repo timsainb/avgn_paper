@@ -10407,3 +10407,259 @@ pciBusID: 0000:83:00.0
 [I 14:23:34.909 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
 [I 14:25:34.258 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
 [I 14:27:34.291 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:28:42.335 LabApp] Starting buffering for b6811db2-2831-444b-823c-785f07a7fbfd:dc5fb0a9867445adaa4a9da4c85dd120
+[I 14:28:45.266 LabApp] Kernel shutdown: b6811db2-2831-444b-823c-785f07a7fbfd
+[W 14:28:45.884 LabApp] 404 DELETE /api/sessions/1afc31b9-c37a-4ab2-b9e6-84cadb6517e5 (::1): Session not found: session_id='1afc31b9-c37a-4ab2-b9e6-84cadb6517e5'
+[W 14:28:45.885 LabApp] Session not found: session_id='1afc31b9-c37a-4ab2-b9e6-84cadb6517e5'
+[W 14:28:45.885 LabApp] 404 DELETE /api/sessions/1afc31b9-c37a-4ab2-b9e6-84cadb6517e5 (::1) 1.53ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA3.2.ipynb
+[I 14:29:34.430 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:31:34.729 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:33:34.757 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:35:34.672 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:37:34.696 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:39:34.737 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:41:34.475 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:43:34.750 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:45:34.687 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:47:34.300 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:49:34.402 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:51:34.058 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:53:34.311 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:55:34.297 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:57:34.695 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 14:59:34.671 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:01:34.676 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:03:34.679 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:05:34.668 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:07:34.707 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:09:34.700 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:11:34.620 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:13:34.649 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:15:34.480 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:17:34.652 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:19:34.638 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:21:34.693 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:23:34.648 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:25:34.522 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:27:34.678 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:29:34.677 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:31:34.806 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:33:34.678 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:35:34.689 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:37:34.892 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:39:34.895 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:41:34.709 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:43:34.891 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:45:34.657 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:47:34.697 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:49:34.834 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:51:34.757 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:53:34.689 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:55:34.774 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:57:34.660 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 15:59:34.987 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:24:36.919 LabApp] Kernel interrupted: 51463314-8cca-433e-b358-f12c09c7c165
+[I 17:25:34.388 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:25:44.694 LabApp] Starting buffering for 51463314-8cca-433e-b358-f12c09c7c165:4b33e997f6f346ad8a9485d4574ca938
+[I 17:25:48.234 LabApp] Kernel restarted: 51463314-8cca-433e-b358-f12c09c7c165
+[I 17:25:52.966 LabApp] Adapting from protocol version 5.1 (kernel 51463314-8cca-433e-b358-f12c09c7c165) to 5.3 (client).
+[I 17:25:52.968 LabApp] Restoring connection for 51463314-8cca-433e-b358-f12c09c7c165:4b33e997f6f346ad8a9485d4574ca938
+[I 17:25:52.968 LabApp] Replaying 6 buffered messages
+2019-10-25 17:26:05.517826: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-25 17:26:06.526107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-25 17:26:06.530656: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-25 17:26:06.533655: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-25 17:26:06.535213: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-25 17:26:06.535887: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-25 17:26:06.537918: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-25 17:26:06.539648: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-25 17:26:06.543453: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-25 17:26:06.545304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-25 17:26:06.780618: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e9f087d0e0 executing computations on platform CUDA. Devices:
+2019-10-25 17:26:06.780709: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): TITAN Xp, Compute Capability 6.1
+2019-10-25 17:26:06.788107: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599870000 Hz
+2019-10-25 17:26:06.790044: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e9f0953b80 executing computations on platform Host. Devices:
+2019-10-25 17:26:06.790080: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-25 17:26:06.791094: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-25 17:26:06.791219: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-25 17:26:06.791261: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-25 17:26:06.791299: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-25 17:26:06.791336: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-25 17:26:06.791373: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-25 17:26:06.791410: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-25 17:26:06.791448: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-25 17:26:06.793106: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-25 17:26:06.793173: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-25 17:26:06.795454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-10-25 17:26:06.795480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-10-25 17:26:06.795493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-10-25 17:26:06.797676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11426 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:83:00.0, compute capability: 6.1)
+2019-10-25 17:26:13.441937: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-10-25 17:26:13.488395: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-25 17:26:13.712846: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+[I 17:27:34.379 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:29:34.383 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:31:34.392 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:33:34.420 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:35:34.412 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:37:34.456 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:39:34.442 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:41:34.437 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:43:34.377 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:45:34.193 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:47:34.663 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 17:49:35.280 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb
+[I 10:32:54.862 LabApp] Copying avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb to /avgn_paper/notebooks/6.0-neural-networks
+[W 10:32:57.502 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 3.77ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
+[I 10:32:58.494 LabApp] Kernel started: 2392fde6-7f84-4084-9f30-2f7e876a3598
+[W 10:32:58.507 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 3.91ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
+[I 10:33:02.301 LabApp] Adapting from protocol version 5.1 (kernel 2392fde6-7f84-4084-9f30-2f7e876a3598) to 5.3 (client).
+[I 10:33:12.464 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
+[I 10:33:21.050 LabApp] Starting buffering for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 10:33:21.530 LabApp] Kernel restarted: 2392fde6-7f84-4084-9f30-2f7e876a3598
+[I 10:33:28.787 LabApp] Adapting from protocol version 5.1 (kernel 2392fde6-7f84-4084-9f30-2f7e876a3598) to 5.3 (client).
+[I 10:33:28.789 LabApp] Restoring connection for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 10:33:28.799 LabApp] Replaying 6 buffered messages
+2019-10-26 10:33:43.734660: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-26 10:33:44.337079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-26 10:33:44.338042: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 10:33:44.340307: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 10:33:44.342176: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 10:33:44.343020: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 10:33:44.345460: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 10:33:44.347715: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 10:33:44.351617: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 10:33:44.353746: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 10:33:44.608101: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a81ad6cb0 executing computations on platform CUDA. Devices:
+2019-10-26 10:33:44.608181: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): TITAN Xp, Compute Capability 6.1
+2019-10-26 10:33:44.613312: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599870000 Hz
+2019-10-26 10:33:44.615683: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a81bad730 executing computations on platform Host. Devices:
+2019-10-26 10:33:44.615737: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-26 10:33:44.616928: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-26 10:33:44.617056: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 10:33:44.617112: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 10:33:44.617166: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 10:33:44.617220: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 10:33:44.617273: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 10:33:44.617327: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 10:33:44.617382: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 10:33:44.618999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 10:33:44.619091: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 10:33:44.621758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-10-26 10:33:44.621790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-10-26 10:33:44.621807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-10-26 10:33:44.624086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 204 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:83:00.0, compute capability: 6.1)
+2019-10-26 10:33:46.136180: E tensorflow/stream_executor/cuda/cuda_driver.cc:828] failed to allocate 204.75M (214695936 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2019-10-26 10:33:46.227071: F tensorflow/stream_executor/cuda/cuda_driver.cc:175] Check failed: err == cudaSuccess || err == cudaErrorInvalidValue Unexpected CUDA error: out of memory
+[I 10:33:48.531 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 2392fde6-7f84-4084-9f30-2f7e876a3598 restarted
+[I 10:34:58.666 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-2D.ipynb
+[I 12:04:22.427 LabApp] Starting buffering for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 12:04:23.050 LabApp] Kernel restarted: 2392fde6-7f84-4084-9f30-2f7e876a3598
+[I 12:04:29.185 LabApp] Adapting from protocol version 5.1 (kernel 2392fde6-7f84-4084-9f30-2f7e876a3598) to 5.3 (client).
+[I 12:04:29.186 LabApp] Restoring connection for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 12:04:29.186 LabApp] Replaying 6 buffered messages
+[W 12:04:38.649 LabApp] Notebook avgn_paper/notebooks/6.0-neural-networks/Canary-VAE.ipynb is not trusted
+[W 12:04:38.696 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 3.39ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-VAE.ipynb
+[I 12:04:39.439 LabApp] Adapting from protocol version 5.1 (kernel d9916fc0-f379-41c3-acdb-22feac30f803) to 5.3 (client).
+[W 12:04:39.517 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 2.18ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-VAE.ipynb
+2019-10-26 12:04:46.722207: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-26 12:04:47.311934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-26 12:04:47.312982: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:04:47.315022: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 12:04:47.316656: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 12:04:47.317683: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 12:04:47.319698: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 12:04:47.321542: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 12:04:47.325294: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 12:04:47.327411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 12:04:47.539542: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c160193400 executing computations on platform CUDA. Devices:
+2019-10-26 12:04:47.539667: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): TITAN Xp, Compute Capability 6.1
+2019-10-26 12:04:47.547162: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599870000 Hz
+2019-10-26 12:04:47.550072: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c160269e60 executing computations on platform Host. Devices:
+2019-10-26 12:04:47.550126: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-26 12:04:47.550919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2019-10-26 12:04:47.551006: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:04:47.551047: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 12:04:47.551084: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 12:04:47.551138: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 12:04:47.551178: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 12:04:47.551216: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 12:04:47.551254: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 12:04:47.552565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 12:04:47.552625: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:04:47.554431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-10-26 12:04:47.554452: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-10-26 12:04:47.554474: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-10-26 12:04:47.556039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 204 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:83:00.0, compute capability: 6.1)
+2019-10-26 12:04:48.925099: E tensorflow/stream_executor/cuda/cuda_driver.cc:828] failed to allocate 204.75M (214695936 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2019-10-26 12:04:49.018390: F tensorflow/stream_executor/cuda/cuda_driver.cc:175] Check failed: err == cudaSuccess || err == cudaErrorInvalidValue Unexpected CUDA error: out of memory
+[I 12:04:50.050 LabApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel 2392fde6-7f84-4084-9f30-2f7e876a3598 restarted
+[I 12:04:56.497 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-2D.ipynb
+[I 12:04:59.182 LabApp] Starting buffering for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 12:04:59.651 LabApp] Kernel restarted: 2392fde6-7f84-4084-9f30-2f7e876a3598
+[I 12:05:03.585 LabApp] Adapting from protocol version 5.1 (kernel 2392fde6-7f84-4084-9f30-2f7e876a3598) to 5.3 (client).
+[I 12:05:03.587 LabApp] Restoring connection for 2392fde6-7f84-4084-9f30-2f7e876a3598:76da145f00d94d588006e293c5179f28
+[I 12:05:03.587 LabApp] Replaying 6 buffered messages
+2019-10-26 12:05:16.070411: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-26 12:05:16.659777: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:84:00.0
+2019-10-26 12:05:16.660760: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:05:16.663828: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 12:05:16.666022: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 12:05:16.667469: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 12:05:16.670577: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 12:05:16.673113: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 12:05:16.679389: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 12:05:16.683798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 12:05:16.952842: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557c88844c60 executing computations on platform CUDA. Devices:
+2019-10-26 12:05:16.952916: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): TITAN Xp, Compute Capability 6.1
+2019-10-26 12:05:16.959830: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599870000 Hz
+2019-10-26 12:05:16.962851: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557c8891b6e0 executing computations on platform Host. Devices:
+2019-10-26 12:05:16.962921: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-26 12:05:16.965075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:84:00.0
+2019-10-26 12:05:16.965217: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:05:16.965302: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 12:05:16.965404: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-10-26 12:05:16.965486: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-10-26 12:05:16.965566: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-10-26 12:05:16.965646: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-10-26 12:05:16.965728: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-26 12:05:16.969113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-10-26 12:05:16.969241: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-10-26 12:05:16.973471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-10-26 12:05:16.973516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2019-10-26 12:05:16.973538: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2019-10-26 12:05:16.977504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11427 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:84:00.0, compute capability: 6.1)
+2019-10-26 12:05:23.086563: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1483] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-10-26 12:05:23.126667: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-10-26 12:05:23.336576: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+[I 12:06:41.281 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-VAE.ipynb
+[W 12:06:41.282 LabApp] Notebook avgn_paper/notebooks/6.0-neural-networks/Canary-VAE.ipynb is not trusted
+[I 12:06:58.713 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-2D.ipynb
+[I 12:08:28.740 LabApp] Kernel interrupted: 2392fde6-7f84-4084-9f30-2f7e876a3598
+[I 12:08:59.400 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-2D.ipynb
+[I 12:10:59.932 LabApp] Saving file at /avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-2D.ipynb
+[I 12:13:00.151 LabApp] Starting buffering for 51463314-8cca-433e-b358-f12c09c7c165:4b33e997f6f346ad8a9485d4574ca938
+[I 12:13:03.215 LabApp] Kernel shutdown: 51463314-8cca-433e-b358-f12c09c7c165
+[I 12:13:03.219 LabApp] Copying avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5.ipynb to /avgn_paper/notebooks/6.0-neural-networks
+[W 12:13:05.447 LabApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20191021134151 (::1) 3.64ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
+[I 12:13:06.216 LabApp] Kernel started: 5ffe4de3-4588-4f02-bdea-140007678a54
+[W 12:13:06.264 LabApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20191021134151 (::1) 4.14ms referer=http://localhost:8187/notebooks/avgn_paper/notebooks/6.0-neural-networks/Canary-GAIA5-Copy1.ipynb
+[I 12:13:08.983 LabApp] Adapting from protocol version 5.1 (kernel 5ffe4de3-4588-4f02-bdea-140007678a54) to 5.3 (client).
