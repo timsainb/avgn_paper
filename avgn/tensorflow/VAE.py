@@ -11,10 +11,10 @@ class VAE(tf.keras.Model):
         tf.keras.Model
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, beta=1.0, **kwargs):
         super(VAE, self).__init__()
         self.__dict__.update(kwargs)
-
+        self.beta = beta
         self.enc = tf.keras.Sequential(self.enc)
         self.dec = tf.keras.Sequential(self.dec)
 
@@ -42,9 +42,16 @@ class VAE(tf.keras.Model):
             loc=[0.0] * z.shape[-1], scale_diag=[1.0] * z.shape[-1]
         )
         kl_div = ds.kl_divergence(q_z, p_z)
-        latent_loss = tf.reduce_mean(tf.maximum(kl_div, 0))
-        recon_loss = tf.reduce_mean(tf.reduce_sum(tf.math.square(x - x_recon), axis=0))
+        latent_loss = tf.reduce_mean(tf.maximum(kl_div, 0)) * self.beta
+        """recon_loss = tf.reduce_mean(
+            -tf.reduce_mean(
+                x * tf.math.log(1e-1 + x_recon)
+                + (1 - x) * tf.math.log(1e-1 + 1 - x_recon),
+                1,
+            )
+        )"""
 
+        recon_loss = tf.reduce_mean(tf.reduce_sum(tf.math.square(x - x_recon), axis=0))
         return recon_loss, latent_loss
 
     def compute_gradients(self, x):

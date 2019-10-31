@@ -1,6 +1,7 @@
 import tensorflow as tf
 import tensorflow_probability as tfp
 import matplotlib.pyplot as plt
+import numpy as np
 
 ds = tfp.distributions
 

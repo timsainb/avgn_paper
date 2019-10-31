@@ -57,7 +57,7 @@ def plot_reconstruction(model, example_data, nex=5, zm=3):
         axs[1, exi].matshow(
             example_data_reconstructed.numpy()[exi].squeeze(),
             cmap=plt.cm.Greys,
-            # vmin=0,
+            vmin=0,
             # vmax=1,
         )
     for ax in axs.flatten():

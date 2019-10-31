@@ -10,10 +10,11 @@ class GAIA(tf.keras.Model):
         tf.keras.Model
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, d_prop_xg=1.0, g_prop_interp=1.0, **kwargs):
         super(GAIA, self).__init__()
         self.__dict__.update(kwargs)
-
+        self.d_prop_xg = d_prop_xg
+        self.g_prop_interp = g_prop_interp
         self.enc = tf.keras.Sequential(self.enc)
         self.dec = tf.keras.Sequential(self.dec)
 
@@ -49,19 +50,32 @@ class GAIA(tf.keras.Model):
         z, xg, zi, xi, d_xi, d_x, d_xg = self.network_pass(x)
 
         # compute losses
-        xg_loss = self.regularization(x, xg)
-        d_xg_loss = self.regularization(x, d_xg)
-        d_xi_loss = self.regularization(xi, d_xi)
-        d_x_loss = self.regularization(x, d_x)
-        return d_xg_loss, d_xi_loss, d_x_loss, xg_loss
+        X_D_G_X_loss = tf.clip_by_value(self.regularization(x, d_xg), 0, 1)
+        X_D_G_Zi_loss = tf.clip_by_value(self.regularization(xi, d_xi), 0, 1)
+        X_G_loss = (X_D_G_Zi_loss + X_D_G_X_loss) / 2.0
+        X_D_X_loss = tf.clip_by_value(self.regularization(x, d_x), 0, 1)
+
+        # add losses for generator and descriminator
+        # loss of Encoder/Decoder: reconstructing x_real well and x_fake poorly
+        D_loss = (
+            X_D_X_loss - tf.clip_by_value(X_D_G_Zi_loss, 0, X_D_X_loss) * self.d_prop_xg
+        )
+
+        # Generator should be balancing the reproduction
+        G_loss = (
+            X_D_G_X_loss
+            + tf.clip_by_value(X_D_G_Zi_loss, 0, X_D_G_X_loss) * self.g_prop_interp
+        )
+
+        return (X_D_G_X_loss, X_D_G_Zi_loss, X_G_loss, X_D_X_loss, G_loss, D_loss)
 
     @tf.function
     def compute_gradients(self, x):
         with tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape:
-            d_xg_loss, d_xi_loss, d_x_loss, xg_loss = self.compute_loss(x)
+            _, _, _, _, G_loss, D_loss = self.compute_loss(x)
 
-            gen_loss = d_xg_loss + d_xi_loss
-            disc_loss = d_xg_loss + d_x_loss - tf.clip_by_value(d_xi_loss, 0, d_x_loss)
+            gen_loss = G_loss
+            disc_loss = D_loss
 
         gen_gradients = gen_tape.gradient(
             gen_loss, self.enc.trainable_variables + self.dec.trainable_variables
@@ -123,3 +137,4 @@ def plot_reconstruction(model, example_data, nex=5, zm=3):
         axs[0, axi].set_title(lab)
 
     plt.show()
+
