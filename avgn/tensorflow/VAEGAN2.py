@@ -3,6 +3,8 @@ import tensorflow_probability as tfp
 import matplotlib.pyplot as plt
 import numpy as np
 
+PI = tf.Variable(np.pi)
+
 ds = tfp.distributions
 
 
@@ -23,21 +25,26 @@ class VAEGAN(tf.keras.Model):
         inputs, disc_l, outputs = self.vae_disc_function()
         self.disc = tf.keras.Model(inputs=[inputs], outputs=[outputs, disc_l])
 
-        self.enc_optimizer = tf.keras.optimizers.Adam(self.lr_base_gen, beta_1=0.5)
-        self.dec_optimizer = tf.keras.optimizers.Adam(self.lr_base_gen, beta_1=0.5)
-        self.disc_optimizer = tf.keras.optimizers.Adam(self.get_lr_d, beta_1=0.5)
+        if not hasattr(self, "enc_optimizer"):
+            self.enc_optimizer = tf.keras.optimizers.Adam(self.lr_base_gen)
+            self.dec_optimizer = tf.keras.optimizers.Adam(self.lr_base_gen)
+            self.disc_optimizer = tf.keras.optimizers.Adam(self.get_lr_d)
 
+    @tf.function
     def encode(self, x):
         mean, logvar = tf.split(self.enc(x), num_or_size_splits=2, axis=1)
         return mean, logvar
 
+    @tf.function
     def dist_encode(self, x):
         mu, sigma = self.encode(x)
         return ds.MultivariateNormalDiag(loc=mu, scale_diag=sigma)
 
+    @tf.function
     def get_lr_d(self):
         return self.lr_base_disc * self.D_prop
 
+    @tf.function
     def decode(self, z, apply_sigmoid=False):
         logits = self.dec(z)
         if apply_sigmoid:
@@ -45,6 +52,7 @@ class VAEGAN(tf.keras.Model):
             return probs
         return logits
 
+    @tf.function
     def discriminate(self, x):
         return self.disc(x)
 
@@ -52,6 +60,7 @@ class VAEGAN(tf.keras.Model):
         mu, _ = tf.split(self.enc(x), num_or_size_splits=2, axis=1)
         return self.decode(mu, apply_sigmoid=True)
 
+    @tf.function
     def reparameterize(self, mean, logvar):
         eps = tf.random.normal(shape=mean.shape)
         return eps * tf.exp(logvar * 0.5) + mean
@@ -88,6 +97,10 @@ class VAEGAN(tf.keras.Model):
         logqz_x = log_normal_pdf(z, mean, logvar) * self.beta
         latent_loss = -tf.reduce_mean(logpz - logqz_x)
 
+        enc_loss = latent_loss + discrim_layer_recon_loss
+        dec_loss = gen_fake_loss + discrim_layer_recon_loss
+        disc_loss = disc_fake_loss + self.D_prop * disc_real_loss
+
         return (
             self.D_prop,
             latent_loss,
@@ -95,23 +108,15 @@ class VAEGAN(tf.keras.Model):
             gen_fake_loss,
             disc_fake_loss,
             disc_real_loss,
+            enc_loss,
+            dec_loss,
+            disc_loss,
         )
 
     # @tf.function
     def compute_gradients(self, x):
         with tf.GradientTape() as enc_tape, tf.GradientTape() as dec_tape, tf.GradientTape() as disc_tape:
-            (
-                _,
-                latent_loss,
-                discrim_layer_recon_loss,
-                gen_fake_loss,
-                disc_fake_loss,
-                disc_real_loss,
-            ) = self.compute_loss(x)
-
-            enc_loss = latent_loss + discrim_layer_recon_loss
-            dec_loss = gen_fake_loss + discrim_layer_recon_loss
-            disc_loss = disc_fake_loss + disc_real_loss
+            (_, _, _, _, _, _, enc_loss, dec_loss, disc_loss) = self.compute_loss(x)
 
         enc_gradients = enc_tape.gradient(enc_loss, self.enc.trainable_variables)
         dec_gradients = dec_tape.gradient(dec_loss, self.dec.trainable_variables)
@@ -131,18 +136,21 @@ class VAEGAN(tf.keras.Model):
             zip(disc_gradients, self.disc.trainable_variables)
         )
 
+    @tf.function
     def train_net(self, x):
         enc_gradients, dec_gradients, disc_gradients = self.compute_gradients(x)
         self.apply_gradients(enc_gradients, dec_gradients, disc_gradients)
 
 
+@tf.function
 def log_normal_pdf(sample, mean, logvar, raxis=1):
-    log2pi = tf.math.log(2.0 * np.pi)
+    log2pi = tf.math.log(2.0 * PI)
     return tf.reduce_sum(
         -0.5 * ((sample - mean) ** 2.0 * tf.exp(-logvar) + logvar + log2pi), axis=raxis
     )
 
 
+# @tf.function
 def gan_loss(logits, is_real=True):
     """Computes standard gan loss between logits and labels
                 
@@ -156,10 +164,11 @@ def gan_loss(logits, is_real=True):
         labels = tf.ones_like(logits)
     else:
         labels = tf.zeros_like(logits)
-
-    return tf.compat.v1.losses.sigmoid_cross_entropy(
-        multi_class_labels=labels, logits=logits
-    )
+    # tf.keras.backend.binary_crossentropy(labels, logits)
+    # return tf.compat.v1.losses.sigmoid_cross_entropy(
+    #    multi_class_labels=labels, logits=logits
+    # )
+    return tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels, logits))
 
 
 def sigmoid(x, shift=0.0, mult=20):
@@ -173,7 +182,9 @@ def sigmoid(x, shift=0.0, mult=20):
 def plot_reconstruction(model, example_data, BATCH_SIZE, N_Z, nex=8, zm=2):
 
     example_data_reconstructed = model.reconstruct(example_data)
-    samples = model.decode(tf.random.normal(shape=(BATCH_SIZE, N_Z)))
+    samples = model.decode(
+        tf.random.normal(shape=(BATCH_SIZE, N_Z)), apply_sigmoid=True
+    )
     fig, axs = plt.subplots(ncols=nex, nrows=3, figsize=(zm * nex, zm * 3))
     for axi, (dat, lab) in enumerate(
         zip(

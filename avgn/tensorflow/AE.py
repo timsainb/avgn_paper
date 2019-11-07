@@ -30,9 +30,6 @@ class AE(tf.keras.Model):
         z = self.encode(x)
         _x = self.decode(z)
         ae_loss = tf.reduce_mean(tf.square(x - _x))
-        # corr = tfp.stats.correlation(x, _x)
-        # corr = tf.where(tf.math.is_nan(corr), tf.zeros_like(corr), corr)
-        # ae_loss = -tf.math.reduce_mean(corr)
         return ae_loss
 
     @tf.function

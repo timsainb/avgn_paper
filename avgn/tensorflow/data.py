@@ -1,5 +1,6 @@
 import tensorflow as tf
-from tensorflow.io import FixedLenFeature, parse_single_example
+
+# from tensorflow.io import FixedLenFeature, parse_single_example
 
 
 def _dtype_to_tf_feattype(dtype):
@@ -16,11 +17,11 @@ def _parse_function(example_proto, data_types):
     """
     # list features
     features = {
-        lab: FixedLenFeature([], _dtype_to_tf_feattype(dtype))
+        lab: tf.io.FixedLenFeature([], _dtype_to_tf_feattype(dtype))
         for lab, dtype in data_types.items()
     }
     # parse features
-    parsed_features = parse_single_example(example_proto, features)
+    parsed_features = tf.io.parse_single_example(example_proto, features)
     feat_dtypes = [tf.float32, tf.string, tf.int64]
 
     # convert the features if they are in the wrong format
