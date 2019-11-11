@@ -16,6 +16,7 @@ import noisereduce as nr
 def flatten_spectrograms(specs):
     return np.reshape(specs, (np.shape(specs)[0], np.prod(np.shape(specs)[1:])))
 
+
 def subset_syllables(
     json_dict, indv, unit="syllables", hparams=None, include_labels=True
 ):
@@ -59,6 +60,10 @@ def subset_syllables(
     return syllables, rate, labels
 
 
+def norm(x):
+    return (x - np.min(x)) / (np.max(x) - np.min(x))
+
+
 def make_spec(
     syll_wav,
     fs,
@@ -67,6 +72,7 @@ def make_spec(
     use_tensorflow=False,
     use_mel=True,
     return_tensor=False,
+    norm_uint8=False,
 ):
     """
     """
@@ -89,6 +95,8 @@ def make_spec(
         spec = spectrogram(syll_wav, fs, hparams)
         if use_mel:
             spec = np.dot(spec.T, mel_matrix).T
+    if norm_uint8:
+        spec = (norm(spec) * 255).astype("uint8")
 
     return spec
 
@@ -290,10 +298,10 @@ def get_element(
 def prepare_wav(wav_loc, hparams=None):
     """ load wav and convert to correct format
     """
-    
+
     # get rate and date
     rate, data = load_wav(wav_loc)
-    
+
     # convert data if needed
     if np.issubdtype(type(data[0]), np.integer):
         data = int16_to_float32(data)
@@ -308,41 +316,50 @@ def prepare_wav(wav_loc, hparams=None):
             data = nr.reduce_noise(
                 audio_clip=data, noise_clip=data, **hparams.noise_reduce_kwargs
             )
-    
+
     return rate, data
 
 
-def create_label_df(json_dict, hparams=None, labels_to_retain = [], unit="syllables", dict_features_to_retain = [], key=None):
+def create_label_df(
+    json_dict,
+    hparams=None,
+    labels_to_retain=[],
+    unit="syllables",
+    dict_features_to_retain=[],
+    key=None,
+):
     """ create a dataframe from json dictionary of time events and labels
     """
-    
+
     syllable_dfs = []
     # loop through individuals
-    for indvi, indv in enumerate(json_dict['indvs'].keys()):
-        if unit not in json_dict['indvs'][indv].keys():
+    for indvi, indv in enumerate(json_dict["indvs"].keys()):
+        if unit not in json_dict["indvs"][indv].keys():
             continue
         indv_dict = {}
-        indv_dict['start_time'] = json_dict['indvs'][indv][unit]['start_times']
-        indv_dict['end_time'] = json_dict['indvs'][indv][unit]['end_times']
+        indv_dict["start_time"] = json_dict["indvs"][indv][unit]["start_times"]
+        indv_dict["end_time"] = json_dict["indvs"][indv][unit]["end_times"]
 
         # get data for individual
-        for label in labels_to_retain: 
-            indv_dict[label] = json_dict['indvs'][indv][unit][label]
-            if len(indv_dict[label]) < len(indv_dict['start_time']):
-                indv_dict[label] = np.repeat(indv_dict[label], len(indv_dict['start_time']))
+        for label in labels_to_retain:
+            indv_dict[label] = json_dict["indvs"][indv][unit][label]
+            if len(indv_dict[label]) < len(indv_dict["start_time"]):
+                indv_dict[label] = np.repeat(
+                    indv_dict[label], len(indv_dict["start_time"])
+                )
 
         # create dataframe
         indv_df = pd.DataFrame(indv_dict)
-        indv_df['indv'] = indv
-        indv_df['indvi'] = indvi
+        indv_df["indv"] = indv
+        indv_df["indvi"] = indvi
         syllable_dfs.append(indv_df)
-    
-    syllable_df = pd.concat(syllable_dfs)    
+
+    syllable_df = pd.concat(syllable_dfs)
     for feat in dict_features_to_retain:
         syllable_df[feat] = json_dict[feat]
     # associate current syllables with key
-    syllable_df['key'] = key
-    
+    syllable_df["key"] = key
+
     return syllable_df
 
 
@@ -359,7 +376,7 @@ def get_row_audio(syllable_df, wav_loc, hparams):
         data[int(st * rate) : int(et * rate)]
         for st, et in zip(syllable_df.start_time.values, syllable_df.end_time.values)
     ]
-    
+
     syllable_df["rate"] = rate
 
     return syllable_df
