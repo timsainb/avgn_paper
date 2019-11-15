@@ -14,7 +14,9 @@ class DataSet(object):
     """
     """
 
-    def __init__(self, DATASET_ID, hparams=None, default_rate=None):
+    def __init__(
+        self, DATASET_ID, hparams=None, default_rate=None, build_mel_matrix=True
+    ):
         self.default_rate = None
 
         if hparams is None:
@@ -39,7 +41,8 @@ class DataSet(object):
 
         self._get_unique_individuals()
 
-        self.build_mel_matrix()
+        if build_mel_matrix:
+            self.build_mel_matrix()
 
     def _get_wav_json_files(self):
         """ find wav and json files in data folder

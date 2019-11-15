@@ -370,7 +370,8 @@ def get_row_audio(syllable_df, wav_loc, hparams):
 
     # load audio
     rate, data = prepare_wav(wav_loc, hparams)
-
+    data = data.astype('float32')
+    
     # get audio for each syllable
     syllable_df["audio"] = [
         data[int(st * rate) : int(et * rate)]
