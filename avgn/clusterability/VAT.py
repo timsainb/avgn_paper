@@ -57,7 +57,7 @@ def ordered_dissimilarity_matrix(X):
                     p = candidate_p
                     q = candidate_j
                     mini = R[p, q]
-        
+
             pbar.update(len(J))
         P[r] = q
         I.append(q)
@@ -75,7 +75,7 @@ def ordered_dissimilarity_matrix(X):
 
     # Step 4 :
 
-    return ODM, R
+    return ODM, P
 
 
 def ivat_ordered_dissimilarity_matrix(D):
