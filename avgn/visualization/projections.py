@@ -251,7 +251,8 @@ def scatter_spec(
     draw_lines=True,
     n_subset=-1,
     ax=None,
-    show_scatter=True
+    show_scatter=True,
+    border_line_width = 1,
 ):
     """
     """
@@ -385,6 +386,9 @@ def scatter_spec(
         axs[key]["ax"].set_yticks([])
         if color_points:
             plt.setp(axs[key]["ax"].spines.values(), color=pal[key])
+
+        for i in axs[key]["ax"].spines.values():
+            i.set_linewidth(border_line_width) 
 
         # draw a line between point and image
         if draw_lines:
