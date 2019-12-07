@@ -4,7 +4,7 @@ setup(
     name='avgn',
     packages=find_packages(),
     version='0.2.0',
-    description='the paper and analyses for AVGN',
+    description='Latent models for visualizing, characterizing, and generating animal vocalizations',
     author='Tim Sainburg',
     license='MIT',
 )

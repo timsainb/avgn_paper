@@ -19,5 +19,5 @@ scikit-learn
 scipy
 seaborn
 tqdm
-h5pyq
+h5py
 joblib

@@ -95,12 +95,12 @@ Now that your data is in the right format, this shouldn't be too difficult. Just
 Project Organization
 ------------
 
+This is a rough outline of the organization of this repository:
+
     ├── LICENSE
     ├── README.md                              <- The top-level README for developers using this project.
     ├── data                                   <- Vocalization data should be stored here 
-    │
     ├── docs                                   <- General documentation on AVGN
-    │     
     ├── notebooks                              <- Jupyter notebooks. 
     │   ├── 00.0-download-datasets             <- Downloads some of the datasets used in the paper
     │   ├── 00.1-data-exploration              <- Loose scratchpads to explore some datasets.
@@ -121,23 +121,36 @@ Project Organization
     │   ├── 10.0-dataset-statistics            <- General statistics of the datasets I used in the paper
     │   └── 11.0-umap-projection-fig           <- Fig 1 in the paper. 
     │
-    ├── requirements.txt                       <- The requirements file for reproducing the analysis environment.
+    ├── requirements.txt                       <- For reproducing the analysis environment.
     │
-    ├── setup.py                               <- makes project pip installable (pip install -e .) so src can be imported
+    ├── setup.py                               <- makes project pip installable 
     ├── avgn                                   <- Source code for use in this project.
-
+    │   ├── clusterability                     <- X
+    │   ├── custom_parsing                     <- custom parsing for each dataset.
+    |   |                                         could as easily be done in a notebook
+    │   ├── downloading                        <- functions to download datasets 
+    │   ├── signalprocessing                   <- various signal processing functions
+    │   ├── song_segmentation                  <- segment bouts from wavs
+    │   ├── tensorflow                         <- neural network models
+    │   ├── utils                              <- general functions
+    │   ├── dataset.py                         <- python dataset object for handing json data
+    │   └── visualization                      <- various types of visualizations
+                                                  
 
 
 ## Notes
 - There are only notebooks to download datasets for a subset of the datasets that are freely available online. This is because I didn't think to write these as notebooks until later in the analysis pipeline. If you want to write a notebook to download any other datasets, I would be glad to pull it in. 
 - Many of the datasets I took a look at didn't make it into the final analysis. For most of these datasets, the reason was that it was too time-consuming to clean up the data before it could be used for my purposes (e.g. segmenting vocalizations out from long noisy recordings). I left most of the exploration notebooks in this repository so that you could take a look at them yourself. 
 - I didn't add spectrogram inversion to these notebooks yet. In the past, I've just used griffin and lim inversion. I have an [implementation of griffin + lim in the other avgn repository](https://github.com/timsainb/avgn). [I also have a notebook version in another repository with a google colab example](https://github.com/timsainb/tensorflow2-generative-models). It should be pretty straightforward to get working, but if you're having trouble just ask. It might also be worth looking into [other spectrogram inversions techniques](https://anclab.org/software/phaserecon/). If you have a good example inversion notebook you would like to pull into this repo, please do so!
-
+- For neural networks you need to install Tensorflow >=2.0. Ideally, install the GPU version on a decent computer to run networks at a reasonable speed. I didn't add tensorflow to the requirements because I don't want to mess with your current installations. 
 --------
+
 ## Citation
 
 If you use this repository in your research, please cite our paper:
 
 (paper not yet online, contact me)
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+--------
+
+<i> <small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></i>
