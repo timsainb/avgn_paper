@@ -5,6 +5,18 @@ Animal Vocalization Generative Network (AVGN) is a repository of python tools ce
 
 Currently, there are two seperate repositories for AVGN: one at [github.com/timsainb/avgn](github.com/timsainb/avgn) that hosts an earlier and less feature rich, but cleaner version of this code. The second is [this repository](github.com/timsainb/avgn_paper). There are more species and examples in this repo, but its not as clean and might be a bit harder to figure out. 
 
+## Discrete latent projections of vocalizations
+![](imgs/discrete-projections.jpg)
+
+## Abstracting sequential organization
+![](imgs/bf-sequential-organization-4.jpg)
+
+## Latent trajectory representations of song
+![](imgs/latent-trajectory.jpg)
+
+## Generating new vocalizations from latent space
+![](imgs/network-diagrams-and-projections.jpg)
+
 # I want to use these tools on my own dataset. 
 Great! The purpose of this repository is for you to be able to apply these tools to your own dataset. To use these tools, you are going to need to be somewhat proficient in python and jupyter notebooks. If you haven't used python or jupyter before, these notebooks can be an opportunity to learn! But first take some time to learn the basics. 
 
