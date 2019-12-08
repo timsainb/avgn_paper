@@ -1,4 +1,4 @@
-Animal Vocalization Generative Network
+Animal Vocalization Generative Network (AVGN)
 ==============================
 
 Animal Vocalization Generative Network (AVGN) is a repository of python tools centered around latent models used to generate, visualize, and characterize animal vocalizations. The code for this repository supports the paper Tim Sainburg et al., (reference below). 
@@ -6,21 +6,30 @@ Animal Vocalization Generative Network (AVGN) is a repository of python tools ce
 Currently, there are two seperate repositories for AVGN: one at [github.com/timsainb/avgn](github.com/timsainb/avgn) that hosts an earlier and less feature rich, but cleaner version of this code. The second is [this repository](github.com/timsainb/avgn_paper). There are more species and examples in this repo, but its not as clean and might be a bit harder to figure out. 
 
 ## Discrete latent projections of vocalizations
+Unsupervised latent projections reveal structure in vocal repertoires between and across individuals, populations, and species. 
+
 ![](imgs/discrete-projections.jpg)
 
 ## Abstracting sequential organization
+The sequential organization of birdsong can be abstracted into symbolic sequences in a fully unsupervised manner. 
 ![](imgs/bf-sequential-organization-4.jpg)
 
-## Latent trajectory representations of song
+## Latent trajectories of vocalizations
+Vocalizations from diverse species can be treated as latent trajectories revealing short and long timescale dynamics without abstrating vocal sequences to discrete elements or categories.  
+
 ![](imgs/latent-trajectory.jpg)
 
 ## Generating new vocalizations from latent space
+Latent spaces can be sampled from to generate new vocal elements in a systematic manner. These sampled elements can be used for behavioral and physiological experiments. 
+
 ![](imgs/network-diagrams-and-projections.jpg)
+
+<hr \>
+<hr \>
 
 # I want to use these tools on my own dataset. 
 Great! The purpose of this repository is for you to be able to apply these tools to your own dataset. To use these tools, you are going to need to be somewhat proficient in python and jupyter notebooks. If you haven't used python or jupyter before, these notebooks can be an opportunity to learn! But first take some time to learn the basics. 
 
-<hr \>
 
 ## Getting started
 You have a dataset of animal vocalizations and you want to use AVGN to analyse them. Currently, your data is in some format that *probably* isn't the exact same as the one used in AVGN. This is a very breif guide to how to use this repository, so feel free to send me an email if you're running into trouble. The broad steps are: 
