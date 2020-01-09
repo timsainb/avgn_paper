@@ -1,6 +1,22 @@
 Animal Vocalization Generative Network (AVGN)
 ==============================
 
+This paper reproduces all of the figures in the [Sainburg et al., (2019)](https://www.biorxiv.org/content/early/2019/12/11/870311.full.pdf): 
+
+```
+@article {Sainburg870311,
+	author = {Sainburg, Tim and Thielk, Marvin and Gentner, Timothy Q},
+	title = {Latent space visualization, characterization, and generation of diverse vocal communication signals},
+	elocation-id = {870311},
+	year = {2019},
+	doi = {10.1101/870311},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2019/12/11/870311},
+	eprint = {https://www.biorxiv.org/content/early/2019/12/11/870311.full.pdf},
+	journal = {bioRxiv}
+}
+```
+
 Animal Vocalization Generative Network (AVGN) is a repository of python tools centered around latent models used to generate, visualize, and characterize animal vocalizations. The code for this repository supports the paper Tim Sainburg et al., (reference below). 
 
 Currently, there are two seperate repositories for AVGN: one at [github.com/timsainb/avgn](github.com/timsainb/avgn) that hosts an earlier and less feature rich, but cleaner version of this code. The second is [this repository](github.com/timsainb/avgn_paper). There are more species and examples in this repo, but its not as clean and might be a bit harder to figure out. 
