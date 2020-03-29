@@ -97,8 +97,21 @@ def annotate_bouts(
     element_end_times = []
     element_syllable_num = []
     element_pos_in_syllable = []
+    element_pf_start = []
+    element_pf_end = []
+    element_pf_mean = []
+    element_trill_amp_mean = []
 
     for idx, element_row in wav_elements.iterrows():
+
+        # Peak frequency
+        freq_list = np.array(element_row.PEAKFREQ.split(" "))[:-1].astype("float")
+        trillamp_list = np.array(element_row.TRILLAMP.split(" "))[:-1].astype("float")
+        element_pf_start.append(freq_list[5])
+        element_pf_end.append(freq_list[-1])
+        element_pf_mean.append(np.mean(freq_list[5:]))
+        element_trill_amp_mean.append(np.mean(trillamp_list[6:]))
+
         # timings of element
         element_start = (
             element_row.STARTTIME * element_row.TIMESTEP
@@ -132,6 +145,18 @@ def annotate_bouts(
     # add information about elements
     json_dict["indvs"][individual_row.NAME]["elements"]["pos_in_syllable"] = NoIndent(
         element_pos_in_syllable
+    )
+    json_dict["indvs"][individual_row.NAME]["elements"]["peakfreq_start"] = NoIndent(
+        element_pf_start
+    )
+    json_dict["indvs"][individual_row.NAME]["elements"]["peakfreq_end"] = NoIndent(
+        element_pf_end
+    )
+    json_dict["indvs"][individual_row.NAME]["elements"]["peakfreq_mean"] = NoIndent(
+        element_pf_mean
+    )
+    json_dict["indvs"][individual_row.NAME]["elements"]["trill_amp_mean"] = NoIndent(
+        element_trill_amp_mean
     )
     json_dict["indvs"][individual_row.NAME]["elements"]["syllable"] = NoIndent(
         [int(i) for i in element_syllable_num]

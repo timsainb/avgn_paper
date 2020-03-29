@@ -24,6 +24,56 @@ def spectrogram(y, fs, hparams):
     return _normalize(spectrogram_nn(y, fs, hparams), hparams)
 
 
+def spectrogram_librosa(y, fs, hparams):
+    D = np.abs(_stft(preemphasis(y, hparams), fs, hparams))
+    S = librosa.amplitude_to_db(D) - hparams.ref_level_db
+    S_norm = _normalize(S, hparams)
+    return S_norm
+
+
+def melspectrogram_librosa(y, fs, hparams, _mel_basis):
+    D = _stft(preemphasis(y, hparams), fs, hparams)
+    S = (
+        librosa.amplitude_to_db(_linear_to_mel(np.abs(D), _mel_basis))
+        - hparams.ref_level_db
+    )
+    return S
+
+
+def griffinlim_librosa(spectrogram, fs, hparams):
+    hop_length = int(hparams.hop_length_ms / 1000 * fs)
+    win_length = int(hparams.win_length_ms / 1000 * fs)
+    return inv_preemphasis(
+        librosa.griffinlim(
+            spectrogram,
+            n_iter=hparams.griffin_lim_iters,
+            hop_length=hop_length,
+            win_length=win_length,
+        ),
+        hparams,
+    )
+
+
+def inv_spectrogram_librosa(spectrogram, fs, hparams):
+    """Converts spectrogram to waveform using librosa"""
+    S_denorm = _denormalize(spectrogram, hparams)
+    S = librosa.db_to_amplitude(
+        S_denorm + hparams.ref_level_db
+    )  # Convert back to linear
+    # Reconstruct phase
+    return griffinlim_librosa(S, fs, hparams)
+
+
+def inv_spectrogram(spectrogram, fs, hparams):
+    """Converts spectrogram to waveform using librosa"""
+    S = _db_to_amp(
+        _denormalize(spectrogram, hparams) + hparams.ref_level_db
+    )  # Convert back to linear
+    return inv_preemphasis(
+        _griffin_lim(S ** hparams.power, fs, hparams), hparams
+    )  # Reconstruct phase
+
+
 def reassigned_spectrogram(y, fs, hparams):
 
     freqs, times, mags = librosa.reassigned_spectrogram(
@@ -41,16 +91,6 @@ def reassigned_spectrogram(y, fs, hparams):
     S = _normalize(S, hparams)
     return S
     # return freqs, times, mags
-
-
-def inv_spectrogram(spectrogram, fs, hparams):
-    """Converts spectrogram to waveform using librosa"""
-    S = _db_to_amp(
-        _denormalize(spectrogram, hparams) + hparams.ref_level_db
-    )  # Convert back to linear
-    return inv_preemphasis(
-        _griffin_lim(S ** hparams.power, fs, hparams), hparams
-    )  # Reconstruct phase
 
 
 def preemphasis(x, hparams):
@@ -93,15 +133,44 @@ def _linear_to_mel(spectrogram, _mel_basis):
     return np.dot(_mel_basis, spectrogram)
 
 
-def _build_mel_basis(hparams):
-    n_fft = (hparams.num_freq - 1) * 2
-    return librosa.filters.mel(
-        hparams.sample_rate,
+def _mel_to_linear(melspectrogram, _mel_basis=None, _mel_inverse_basis=None):
+    if (_mel_basis is None) and (_mel_inverse_basis is None):
+        raise ValueError("_mel_basis or _mel_inverse_basis needed")
+    elif _mel_inverse_basis is None:
+        with np.errstate(divide="ignore", invalid="ignore"):
+            _mel_inverse_basis = np.nan_to_num(
+                np.divide(_mel_basis, np.sum(_mel_basis.T, axis=1))
+            ).T
+    return np.matmul(_mel_inverse_basis, melspectrogram)
+
+
+def _build_mel_inversion_basis(_mel_basis):
+    with np.errstate(divide="ignore", invalid="ignore"):
+        mel_inverse_basis = np.nan_to_num(
+            np.divide(_mel_basis, np.sum(_mel_basis.T, axis=1))
+        ).T
+    return mel_inverse_basis
+
+
+def _build_mel_basis(hparams, fs, rate=None, use_n_fft=True):
+    if "n_fft" not in hparams.__dict__ or (use_n_fft == False):
+        if "num_freq" in hparams.__dict__:
+            n_fft = (hparams.num_freq - 1) * 2
+        else:
+            n_fft = int(hparams.win_length_ms / 1000 * fs)
+    else:
+        n_fft = hparams.n_fft
+    if rate is None:
+        rate = hparams.sample_rate
+    _mel_basis = librosa.filters.mel(
+        rate,
         n_fft,
         n_mels=hparams.num_mels,
-        fmin=hparams.fmin_mel,
-        fmax=hparams.fmax_mel,
+        fmin=hparams.mel_lower_edge_hertz,
+        fmax=hparams.mel_upper_edge_hertz,
     )
+
+    return np.nan_to_num(_mel_basis.T / np.sum(_mel_basis, axis=1)).T
 
 
 def _amp_to_db(x):

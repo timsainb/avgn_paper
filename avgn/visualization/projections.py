@@ -13,6 +13,9 @@ from matplotlib import gridspec
 from scipy.spatial import Voronoi, voronoi_plot_2d
 from scipy.spatial import cKDTree
 from matplotlib import lines
+import matplotlib.colors
+import matplotlib.cm as cm
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
 def scatter_projections(
@@ -25,7 +28,16 @@ def scatter_projections(
     s=1,
     color="k",
     color_palette="tab20",
+    categorical_labels=True,
     show_legend=True,
+    tick_pos="bottom",
+    tick_size=16,
+    cbar_orientation="vertical",
+    log_x=False,
+    log_y=False,
+    grey_unlabelled=True,
+    fig=None,
+    colornorm=False,
 ):
     """ creates a scatterplot of syllables using some projection
     """
@@ -43,9 +55,14 @@ def scatter_projections(
 
     # color labels
     if labels is not None:
-        pal = sns.color_palette(color_palette, n_colors=len(np.unique(labels)))
-        lab_dict = {lab: pal[i] for i, lab in enumerate(np.unique(labels))}
-        colors = np.array([lab_dict[i] for i in labels])
+        if categorical_labels:
+            pal = sns.color_palette(color_palette, n_colors=len(np.unique(labels)))
+            lab_dict = {lab: pal[i] for i, lab in enumerate(np.unique(labels))}
+            if grey_unlabelled:
+                if -1 in lab_dict.keys():
+                    lab_dict[-1] = [0.95, 0.95, 0.95, 1.0]
+                print(lab_dict)
+            colors = np.array([lab_dict[i] for i in labels])
     else:
         colors = color
 
@@ -53,14 +70,69 @@ def scatter_projections(
         fig, ax = plt.subplots(figsize=figsize)
 
         # plot
-    ax.scatter(projection[:, 0], projection[:, 1], alpha=alpha, s=s, color=colors)
+    if colornorm:
+        norm = norm = matplotlib.colors.LogNorm()
+    else:
+        norm = None
+    if categorical_labels or labels is None:
+        ax.scatter(
+            projection[:, 0],
+            projection[:, 1],
+            alpha=alpha,
+            s=s,
+            color=colors,
+            norm=norm,
+        )
+
+    else:
+        cmin = np.quantile(labels, 0.01)
+        cmax = np.quantile(labels, 0.99)
+        sct = ax.scatter(
+            projection[:, 0],
+            projection[:, 1],
+            vmin=cmin,
+            vmax=cmax,
+            cmap=plt.get_cmap(color_palette),
+            alpha=alpha,
+            s=s,
+            c=labels,
+        )
+
+    if log_x:
+        ax.set_xscale("log")
+    if log_y:
+        ax.set_yscale("log")
+
     if labels is not None:
-        legend_elements = [
-            Line2D([0], [0], marker="o", color=value, label=key)
-            for key, value in lab_dict.items()
-        ]
+        if categorical_labels == True:
+            legend_elements = [
+                Line2D([0], [0], marker="o", color=value, label=key)
+                for key, value in lab_dict.items()
+            ]
         if show_legend:
-            ax.legend(handles=legend_elements)
+            if not categorical_labels:
+                if cbar_orientation == "horizontal":
+                    axins1 = inset_axes(
+                        ax,
+                        width="50%",  # width = 50% of parent_bbox width
+                        height="5%",  # height : 5%
+                        loc="upper left",
+                    )
+                    # cbar = fig.colorbar(sct, cax=axins1, orientation=cbar_orientation
+
+                else:
+                    axins1 = inset_axes(
+                        ax,
+                        width="5%",  # width = 50% of parent_bbox width
+                        height="50%",  # height : 5%
+                        loc="lower right",
+                    )
+                cbar = fig.colorbar(sct, cax=axins1, orientation=cbar_orientation)
+                cbar.ax.tick_params(labelsize=tick_size)
+                axins1.xaxis.set_ticks_position(tick_pos)
+            else:
+                ax.legend(handles=legend_elements)
+
     return ax
 
 
@@ -73,7 +145,7 @@ def draw_projection_transitions(
     cmap=plt.get_cmap("cubehelix"),
     alpha=0.05,
     linewidth=3,
-    range_pad=0.1
+    range_pad=0.1,
 ):
     """ draws a line plot of each transition
     """
@@ -252,7 +324,8 @@ def scatter_spec(
     n_subset=-1,
     ax=None,
     show_scatter=True,
-    border_line_width = 1,
+    border_line_width=1,
+    img_origin="lower",
 ):
     """
     """
@@ -297,7 +370,7 @@ def scatter_spec(
     main_ax = fig.add_subplot(gs[1 : column_size - 1, 1 : column_size - 1])
     # main_ax.scatter(z[:, 0], z[:, 1], **scatter_kwargs)
     if show_scatter:
-        scatter_projections(projection=z, ax=main_ax, **scatter_kwargs)
+        scatter_projections(projection=z, ax=main_ax, fig=fig, **scatter_kwargs)
 
     # loop through example columns
     axs = {}
@@ -376,7 +449,7 @@ def scatter_spec(
         # draw spec
         axs[key]["ax"].matshow(
             specs[chosen_point],
-            origin="lower",
+            origin=img_origin,
             interpolation="none",
             aspect="auto",
             **matshow_kwargs,
@@ -388,7 +461,7 @@ def scatter_spec(
             plt.setp(axs[key]["ax"].spines.values(), color=pal[key])
 
         for i in axs[key]["ax"].spines.values():
-            i.set_linewidth(border_line_width) 
+            i.set_linewidth(border_line_width)
 
         # draw a line between point and image
         if draw_lines:
@@ -444,4 +517,5 @@ def scatter_spec(
         ax.imshow(im)
         plt.close(fig)
 
-    return fig, axs, main_ax
+    return fig, axs, main_ax, [xmin, xmax, ymin, ymax]
+
