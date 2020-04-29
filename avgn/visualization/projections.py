@@ -38,6 +38,9 @@ def scatter_projections(
     grey_unlabelled=True,
     fig=None,
     colornorm=False,
+    rasterized=True,
+    equalize_axes=True,
+    print_lab_dict=False,  # prints color scheme
 ):
     """ creates a scatterplot of syllables using some projection
     """
@@ -56,12 +59,20 @@ def scatter_projections(
     # color labels
     if labels is not None:
         if categorical_labels:
-            pal = sns.color_palette(color_palette, n_colors=len(np.unique(labels)))
+            if (color_palette == "tab20") & (len(np.unique(labels)) < 20):
+                pal = sns.color_palette(color_palette, n_colors=20)
+                pal = np.array(pal)[
+                    np.linspace(0, 19, len(np.unique(labels))).astype("int")
+                ]
+                # print(pal)
+            else:
+                pal = sns.color_palette(color_palette, n_colors=len(np.unique(labels)))
             lab_dict = {lab: pal[i] for i, lab in enumerate(np.unique(labels))}
             if grey_unlabelled:
                 if -1 in lab_dict.keys():
                     lab_dict[-1] = [0.95, 0.95, 0.95, 1.0]
-                print(lab_dict)
+                if print_lab_dict:
+                    print(lab_dict)
             colors = np.array([lab_dict[i] for i in labels])
     else:
         colors = color
@@ -78,6 +89,7 @@ def scatter_projections(
         ax.scatter(
             projection[:, 0],
             projection[:, 1],
+            rasterized=rasterized,
             alpha=alpha,
             s=s,
             color=colors,
@@ -93,6 +105,7 @@ def scatter_projections(
             vmin=cmin,
             vmax=cmax,
             cmap=plt.get_cmap(color_palette),
+            rasterized=rasterized,
             alpha=alpha,
             s=s,
             c=labels,
@@ -132,7 +145,8 @@ def scatter_projections(
                 axins1.xaxis.set_ticks_position(tick_pos)
             else:
                 ax.legend(handles=legend_elements)
-
+    if equalize_axes:
+        ax.axis("equal")
     return ax
 
 
@@ -518,4 +532,3 @@ def scatter_spec(
         plt.close(fig)
 
     return fig, axs, main_ax, [xmin, xmax, ymin, ymax]
-
