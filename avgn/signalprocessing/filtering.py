@@ -1,6 +1,7 @@
 from scipy.signal import butter, lfilter
 import numpy as np
-from librosa.core.time_frequency import mel_frequencies
+#from librosa.core.time_frequency import mel_frequencies
+from librosa import mel_frequencies
 import warnings
 
 
