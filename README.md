@@ -1,19 +1,18 @@
 Animal Vocalization Generative Network (AVGN)
 ==============================
 
-This paper reproduces all of the figures in the [Sainburg et al., (2019)](https://www.biorxiv.org/content/early/2019/12/11/870311.full.pdf): 
+This paper reproduces all of the figures in the [Sainburg et al., (2020)](https://doi.org/10.1371/journal.pcbi.1008228): 
 
 ```
-@article {Sainburg870311,
-	author = {Sainburg, Tim and Thielk, Marvin and Gentner, Timothy Q},
-	title = {Latent space visualization, characterization, and generation of diverse vocal communication signals},
-	elocation-id = {870311},
-	year = {2019},
-	doi = {10.1101/870311},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2019/12/11/870311},
-	eprint = {https://www.biorxiv.org/content/early/2019/12/11/870311.full.pdf},
-	journal = {bioRxiv}
+@article{sainburg2020finding,
+  title={Finding, visualizing, and quantifying latent structure across diverse animal vocal repertoires},
+  author={Sainburg, Tim and Thielk, Marvin and Gentner, Timothy Q},
+  journal={PLoS computational biology},
+  volume={16},
+  number={10},
+  pages={e1008228},
+  year={2020},
+  publisher={Public Library of Science}
 }
 ```
 
@@ -54,6 +53,10 @@ You have a dataset of animal vocalizations and you want to use AVGN to analyse t
 1. Clone and install AVGN
 2. Convert your data into the correct format. 
 3. Run analyses on your correctly formatted data
+
+
+### UPDATE: We added a tutorial walking you through AVGN on a Bengalese finch dataset
+See the tutorials folder. This tutorial should make applying AVGN to your own data more clear.
 
 ### 1. Clone and install AVGN
 
