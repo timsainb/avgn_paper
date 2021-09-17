@@ -1,6 +1,5 @@
 import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.cbook as cb
 from matplotlib.colors import colorConverter, Colormap, Normalize
 from matplotlib.collections import LineCollection
 from matplotlib.patches import FancyArrowPatch
@@ -278,14 +277,14 @@ def draw_networkx_edges(
     # set edge positions
     edge_pos = np.asarray([(pos[e[0]], pos[e[1]]) for e in edgelist])
 
-    if not cb.iterable(width):
+    if not np.iterable(width):
         lw = (width,)
     else:
         lw = width
 
     if (
         not is_string_like(edge_color)
-        and cb.iterable(edge_color)
+        and np.iterable(edge_color)
         and len(edge_color) == len(edge_pos)
     ):
         if np.alltrue([is_string_like(c) for c in edge_color]):
@@ -294,7 +293,7 @@ def draw_networkx_edges(
             edge_colors = tuple([colorConverter.to_rgba(c, alpha) for c in edge_color])
         elif np.alltrue([not is_string_like(c) for c in edge_color]):
             # If color specs are given as (rgb) or (rgba) tuples, we're OK
-            if np.alltrue([cb.iterable(c) and len(c) in (3, 4) for c in edge_color]):
+            if np.alltrue([np.iterable(c) and len(c) in (3, 4) for c in edge_color]):
                 edge_colors = tuple(edge_color)
             else:
                 # numbers (which are going to be mapped with a colormap)
@@ -327,7 +326,7 @@ def draw_networkx_edges(
         # r7184 and r7189 (June 6 2009). We should then not set the alpha
         # value globally, since the user can instead provide per-edge alphas
         # now.  Only set it globally if provided as a scalar.
-        if cb.is_numlike(alpha):
+        if np.is_numlike(alpha):
             edge_collection.set_alpha(alpha)
 
         if edge_colors is None:
@@ -375,7 +374,7 @@ def draw_networkx_edges(
             line_width = None
             shrink_source = 0  # space from source to tail
             shrink_target = 0  # space from  head to target
-            if cb.iterable(node_size):  # many node sizes
+            if np.iterable(node_size):  # many node sizes
                 src_node, dst_node = edgelist[i]
                 index_node = nodelist.index(dst_node)
                 marker_size = node_size[index_node]
